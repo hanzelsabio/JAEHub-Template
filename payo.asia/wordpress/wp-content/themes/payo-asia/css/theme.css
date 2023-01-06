@@ -1,0 +1,5031 @@
+@font-face {
+  font-family: metropolis;
+  src: url(../fonts/metropolis.bold.otf);
+}
+@font-face {
+  font-family: ws-semibold;
+  src: url(../fonts/WorkSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: ws-regular;
+  src: url(../fonts/WorkSans-Regular.ttf);
+}
+:root {
+  --payo-metropolis: "Metropolis";
+  --payo-semibold: "WS-SemiBold";
+  --payo-regular: "WS-Regular";
+  --payo-primary: #131212;
+  --payo-secondary: #f5f5f5;
+  --payo-fore-white: #fff;
+  --payo-fore-gray: #666;
+}
+header {
+  position: relative;
+  z-index: 3;
+}
+body {
+  position: relative;
+}
+button:focus,
+a:focus {
+  outline: 0;
+}
+a:focus,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+.payo-header-colored {
+  padding: 20px 0 25px;
+  background: linear-gradient(45deg, #1cacd4, #1d9dcc);
+}
+.payo-header-newsletter-wrapper-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.payo-header-newsletter-wrapper-form h4 {
+  color: var(--payo-fore-white);
+  margin: 0;
+  font-size: 13px;
+  font-family: metropolis, sans-serif;
+  line-height: 25px;
+}
+.payo-header-newsletter-wrapper-form h4 > a {
+  color: var(--payo-secondary);
+}
+.payo-header-newsletter-wrapper-form form {
+  border-bottom: 1px solid #3b5a7a;
+  max-width: 325px;
+  width: 100%;
+  display: flex;
+}
+.payo-header-newsletter-wrapper-form input[type="email"] {
+  background-color: transparent;
+  border: 0;
+  color: var(--payo-fore-white);
+  font-size: 13px;
+  font-family: ws-regular, sans-serif;
+  padding: 8px 15px 8px 5px;
+  width: 100%;
+}
+.payo-header-newsletter-wrapper-form input[type="email"]::placeholder {
+  color: var(--payo-fore-white);
+  opacity: 1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-header-newsletter-wrapper-form input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+.payo-header-newsletter-wrapper-form input[type="email"]:focus,
+.payo-header-newsletter-wrapper-form button:focus {
+  outline: 0;
+  border: 0;
+}
+.payo-header-newsletter-wrapper-form button {
+  padding: 0 10px 0 15px;
+  background-color: transparent;
+  border: 0;
+}
+.payo-header-newsletter-wrapper-form img,
+.payo-header-contact-wrapper img {
+  max-width: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-header-newsletter-wrapper-form button:hover img,
+.payo-header-newsletter-wrapper-form button:focus img {
+  filter: grayscale(1);
+}
+.payo-header-contact-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.payo-header-contact-wrapper img {
+  margin-right: 10px;
+}
+.payo-header-contact-wrapper p {
+  color: var(--payo-fore-white);
+  font-family: ws-semibold;
+  font-size: 13px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0;
+}
+.payo-header-contact-wrapper a {
+  color: var(--payo-fore-white);
+  font-family: ws-regular;
+  font-size: 13px;
+  line-height: 25px;
+  padding: 0 15px;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-header-contact-wrapper a:hover,
+.payo-header-contact-wrapper a:focus {
+  color: var(--payo-secondary);
+}
+.payo-logo-wrapper {
+  display: inline-block;
+}
+.payo-logo-wrapper img {
+  max-width: 150px;
+}
+.payo-header-navbar {
+  padding: 15px 0 20px;
+}
+.payo-header-navbar.payo-header-on-image {
+  background-image: url(../img/background/header-navbar-blue.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 25px 0 100px;
+  margin-top: -5px;
+}
+.payo-header-navbar.payo-header-on-image.payo-additional-header {
+  padding-bottom: 75px;
+}
+#site-navigation {
+  padding-left: 40px;
+}
+#primary-menu .menu-item {
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  margin: 0 5px;
+  line-height: 25px;
+}
+#primary-menu {
+  justify-content: flex-end;
+}
+#primary-menu .menu-item a {
+  padding: 10px 12px;
+  color: var(--payo-fore-white);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+#primary-menu .menu-item a:hover,
+#primary-menu .menu-item a:focus {
+  text-decoration: none;
+  color: var(--payo-secondary);
+}
+.sub-menu li a {
+  color: #000 !important;
+  width: 100% !important;
+  display: inline-block;
+  padding: 20px 20px 10px !important;
+  font-weight: 600 !important;
+}
+.sub-menu li a:hover,
+.sub-menu li a:focus {
+  color: var(--payo-primary) !important;
+  background-color: var(--payo-secondary);
+}
+#primary-menu.navigation-on-white .menu-item a {
+  color: var(--payo-primary);
+}
+#primary-menu.navigation-on-white .menu-item a:hover,
+#primary-menu.navigation-on-white .menu-item a:focus {
+  color: #000;
+}
+#primary-menu.navigation-on-white .sub-menu li a {
+  color: #fff;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+#primary-menu.navigation-on-white .sub-menu li a:hover,
+#primary-menu.navigation-on-white .sub-menu li a:focus {
+  color: var(--payo-secondary);
+}
+.payo-custom-navlink {
+  margin: 0 10px;
+}
+.payo-custom-navlink.payo-member-signup a {
+  border: 1px solid var(--payo-secondary);
+  color: var(--payo-secondary);
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-custom-navlink.payo-member-signup a:hover,
+.payo-custom-navlink.payo-member-signup a:focus {
+  color: var(--payo-primary);
+  text-decoration: none;
+  background-color: var(--payo-secondary);
+}
+#primary-menu.navigation-on-white .payo-custom-navlink.payo-member-signup a {
+  border: 1px solid var(--payo-primary);
+  color: var(--payo-primary);
+}
+#primary-menu.navigation-on-white
+  .payo-custom-navlink.payo-member-signup
+  a:hover,
+#primary-menu.navigation-on-white
+  .payo-custom-navlink.payo-member-signup
+  a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+}
+.payo-custom-navlink.payo-portal a {
+  border: 1px solid var(--payo-secondary);
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  padding: 15px 45px;
+  border-radius: 30px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-custom-navlink.payo-portal a:hover,
+.payo-custom-navlink.payo-portal a:focus {
+  color: var(--payo-secondary);
+  text-decoration: none;
+  background-color: transparent;
+}
+#primary-menu.navigation-on-white .payo-custom-navlink.payo-portal a:hover,
+#primary-menu.navigation-on-white .payo-custom-navlink.payo-portal a:focus {
+  color: var(--payo-primary);
+  border: 1px solid var(--payo-primary);
+}
+.main-navigation ul ul {
+  background-color: #fff;
+  display: unset;
+  width: 500px;
+  padding: 0;
+  text-align: left;
+}
+.main-navigation #menu-item-41 .sub-menu,
+.main-navigation #menu-item-49 .sub-menu {
+  width: 300px !important;
+  padding: 0;
+}
+.main-navigation #menu-item-70 .sub-menu {
+  width: 200px !important;
+  padding: 0;
+}
+.main-navigation #menu-item-41 .sub-menu li,
+.main-navigation #menu-item-49 .sub-menu li,
+.main-navigation #menu-item-70 .sub-menu li {
+  width: 100% !important;
+}
+.sub-menu li {
+  width: 50%;
+  margin: 0 !important;
+}
+.sub-menu li:nth-child(odd) {
+  float: left;
+}
+.sub-menu li:nth-child(even) {
+  float: right;
+}
+a.payo-header-parcel-tracker {
+  border: 1px solid var(--payo-fore-white);
+  background-color: var(--payo-fore-white);
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  line-height: 20px;
+  -moz-transition: 0.5s;
+  max-width: 250px;
+  width: 100%;
+  margin-left: 5px;
+}
+a.payo-header-parcel-tracker:hover,
+a.payo-header-parcel-tracker:focus {
+  background-color: transparent;
+  color: var(--payo-secondary);
+  border: 1px solid var(--payo-secondary);
+}
+.payo-homepage-banner {
+  position: relative;
+  background-color: rgb(9, 9, 9);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  height: 150vh;
+  margin-top: -23vh;
+  display: flex;
+  align-items: center;
+}
+.payo-homepage-banner-image img {
+  width: 100%;
+}
+.payo-homepage-banner-content h1 {
+  color: var(--payo-fore-white);
+  font-size: 45px;
+  font-family: metropolis;
+  line-height: 65px;
+}
+.payo-homepage-banner-content p {
+  font-size: 20px;
+  color: var(--payo-fore-white);
+  font-family: ws-regular;
+  line-height: 36px;
+  margin: 20px 0 30px;
+}
+.payo-homepage-banner-form {
+  display: flex;
+  align-items: center;
+}
+.payo-homepage-banner-form form {
+  border: 1px solid var(--payo-secondary);
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.payo-homepage-banner-form input[type="email"] {
+  background-color: transparent;
+  border: 0;
+  padding-left: 15px;
+  font-size: 15px;
+  font-family: ws-regular;
+  padding: 5px 0 5px 25px;
+  border-right: 1px solid var(--payo-secondary);
+  border-radius: 0;
+  color: var(--payo-fore-white);
+}
+.payo-homepage-banner-form input[type="email"]::placeholder {
+  opacity: 1;
+  color: #fff;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-homepage-banner-form input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+.payo-homepage-banner-form input[type="email"]:focus {
+  outline: 0;
+}
+.payo-homepage-banner-form button {
+  background-color: transparent;
+  border: 0;
+  color: var(--payo-secondary);
+  font-family: ws-semibold;
+  font-size: 15px;
+  padding: 15px 20px 15px 10px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-homepage-banner-form button:hover,
+.payo-homepage-banner-form button:focus {
+  color: var(--payo-fore-white);
+}
+.payo-homepage-banner-form a {
+  background-color: var(--payo-secondary);
+  border: 1px solid var(--payo-secondary);
+  color: var(--payo-primary);
+  font-size: 15px;
+  font-family: ws-semibold;
+  padding: 15px 45px;
+  border-radius: 50px;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-homepage-banner-form a:hover,
+.payo-homepage-banner-form a:focus {
+  background-color: transparent;
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.payo-graphical-wrapper {
+  position: absolute;
+}
+.payo-graphical-wrapper img {
+  width: 100%;
+}
+.payo-graphical-wrapper.linear-circle-banner {
+  bottom: 260px;
+}
+.payo-graphical-wrapper.lines-circle-banner {
+  top: -5%;
+  right: 0;
+}
+.payo-graphical-wrapper.yellow-arrows-banner {
+  left: 3%;
+  bottom: 260px;
+}
+.yellow-arrows-banner img {
+  transform: rotate(-90deg);
+}
+.yellow-arrows-inverted-banner img {
+  transform: rotate(90deg);
+}
+.yellow-arrows-inverted-banner {
+  right: 3%;
+  top: 43%;
+}
+.payo-homepage-partners {
+  padding: 120px 0 80px;
+  background-color: #fff;
+}
+.payo-trusted-partners-list h2 {
+  font-family: metropolis;
+  color: #000;
+  font-size: 25px;
+  line-height: 36px;
+}
+#payoPartnersSlider {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#payoPartnersSlider .owl-stage {
+  display: flex;
+  align-items: center;
+}
+#payoPartnersSlider .item img {
+  max-width: 160px;
+}
+.payo-easy {
+  padding: 135px 0;
+}
+.payo-easy-graphic,
+.payo-easy-main-graphic {
+  position: relative;
+}
+.payo-easy-main-graphic {
+  z-index: 2;
+}
+.payo-easy-main-graphic.payo-graphic-ecom-phil {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 385px;
+}
+.payo-easy-dotted-graphic-small {
+  position: absolute;
+  z-index: 1;
+  left: 12%;
+  top: -15%;
+}
+.payo-easy-dotted-graphic-large {
+  position: absolute;
+  z-index: 1;
+  right: 10%;
+  bottom: 20%;
+}
+.payo-easy-content {
+  padding-left: 20px;
+}
+.payo-easy-content h2 {
+  color: #000;
+  font-size: 25px;
+  font-family: metropolis;
+  line-height: 36px;
+}
+.payo-easy-content p {
+  margin: 0;
+  padding: 5px 0 15px;
+  font-size: 15px;
+  font-family: ws-regular;
+  color: #666;
+  line-height: 25px;
+}
+.payo-easy-content a {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  font-family: ws-semibold;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-easy-content a:hover,
+.payo-easy-content a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.payo-why-partner {
+  padding: 85px 0 0;
+}
+.payo-why-partner-head h2 {
+  font-size: 25px;
+  font-family: metropolis;
+  color: #000;
+  line-height: 36px;
+}
+.payo-why-partner-head p {
+  font-size: 18px;
+  color: #666;
+  padding: 10px 0 20px;
+  line-height: 28px;
+  margin: 0;
+  font-family: ws-regular;
+}
+.payo-why-partner-head a {
+  font-family: ws-semibold;
+  color: var(--payo-primary);
+  background-color: var(--payo-secondary);
+  font-size: 15px;
+  padding: 15px 35px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-why-partner-head a:hover,
+.payo-why-partner-head a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+#whyPartnerWithPayo {
+  padding-left: 180px;
+  margin-top: 45px;
+  position: relative;
+}
+#whyPartnerWithPayo .owl-nav {
+  position: absolute;
+  top: -30%;
+  right: 5%;
+}
+#whyPartnerWithPayo .owl-nav img {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+#whyPartnerWithPayo .owl-nav button:focus {
+  outline: 0;
+}
+#whyPartnerWithPayo .owl-nav button:hover img {
+  filter: invert(0.15);
+}
+.payo-why-partner-slide {
+  width: 375px;
+  padding: 45px 40px;
+  border-radius: 5px;
+  background-color: #e7f1fb;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-why-partner-slide:hover,
+.payo-why-partner-slide:focus {
+  background-color: var(--payo-secondary);
+}
+.payo-why-partner-slide a > h3 {
+  color: var(--payo-primary);
+}
+.payo-why-partner-slide a:hover,
+.payo-why-partner-slide a:focus {
+  text-decoration: none;
+}
+.payo-why-partner-slide img {
+  max-width: 40px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-why-partner-slide h3 {
+  font-size: 20px;
+  font-family: metropolis;
+  margin: 0;
+  padding: 15px 0 20px;
+  line-height: 22px;
+}
+.payo-why-partner-slide p {
+  font-size: 15px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  margin: 0;
+  line-height: 25px;
+}
+.payo-works {
+  position: relative;
+  background-color: #131212;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.payo-works .row {
+  flex-direction: row-reverse;
+}
+.payo-works-step-list h2 {
+  font-size: 25px;
+  font-family: metropolis;
+  color: #fff;
+  line-height: 36px;
+}
+.payo-works-steps-wrapper {
+  padding-top: 25px;
+  display: flex;
+}
+.payo-works-numbering {
+  width: 50px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 225px;
+}
+.payo-number-list {
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  padding: 5px 13px;
+  background-color: #b3c1d0;
+  color: #5f7083;
+  display: inline-block;
+  border-radius: 50%;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-number-list:hover:not(.payo-number-active),
+.payo-number-list:focus:not(.payo-number-active) {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  text-decoration: none;
+}
+.payo-number-list.payo-number-active {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+}
+.payo-number-active:hover,
+.payo-number-active:focus {
+  text-decoration: none;
+}
+.payo-works-numbering > a:nth-child(2) {
+  position: relative;
+}
+.payo-works-numbering > a:nth-child(2):before {
+  content: "";
+  height: 130%;
+  width: 1px;
+  background-color: #5f7083;
+  position: absolute;
+  top: -170%;
+  left: 48%;
+}
+.payo-works-numbering > a:nth-child(2):after {
+  content: "";
+  height: 130%;
+  width: 1px;
+  background-color: #5f7083;
+  position: absolute;
+  bottom: -160%;
+  left: 48%;
+}
+.payo-works-box > p:first-child {
+  font-size: 20px;
+  color: #fff;
+  font-family: metropolis;
+  margin: 0;
+  padding-bottom: 5px;
+  line-height: 28px;
+}
+.payo-works-box h3 {
+  font-size: 30px;
+  font-family: metropolis;
+  color: #fff;
+  line-height: 45px;
+  padding-bottom: 10px;
+}
+.payo-works-box h3 + p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  font-family: ws-regular, sans-serif;
+}
+.payo-works-box a {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 15px 35px;
+  display: inline-block;
+  border-radius: 35px;
+  margin-top: 15px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  border: 1px solid var(--payo-secondary);
+}
+.payo-works-box a:hover,
+.payo-works-box a:focus {
+  background-color: transparent;
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.payo-customer-experience {
+  padding: 50px 0 80px;
+  background-color: #fff;
+}
+.payo-homepage-made-you {
+  padding: 30px 0 80px;
+  position: relative;
+}
+.payo-made-you-head h2 {
+  font-family: metropolis;
+  color: #000;
+  font-size: 25px;
+  line-height: 36px;
+  width: 55%;
+}
+.payo-made-you-head p {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--payo-fore-gray);
+  font-family: ws-regular, sans-serif;
+  padding: 10px 0 20px;
+}
+.payo-made-you-persona-box {
+  background-color: #e7f1fb;
+  padding: 40px;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
+  align-items: start;
+  margin-bottom: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  min-height: 275px;
+  -moz-transition: 0.5s;
+}
+.payo-made-you-persona-box:hover,
+.payo-made-you-persona-box:focus {
+  background-color: #194f7c;
+  color: var(--payo-fore-white);
+  box-shadow: 0 2px 5px 2px #0000007a;
+}
+.payo-made-you-persona-box:hover img,
+.payo-made-you-persona-box:focus img {
+  filter: brightness(0) invert(1);
+}
+.payo-made-you-persona-box img {
+  margin-right: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-made-you-persona-box h4 {
+  margin: 0;
+  font-family: metropolis;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 0 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-made-you-persona-box p {
+  margin: 0;
+  font-size: 15px;
+  font-family: ws-regular;
+  color: var(--payo-fore-gray);
+  line-height: 25px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-made-you-persona-box:hover h4,
+.payo-made-you-persona-box:focus h4,
+.payo-made-you-persona-box:hover p,
+.payo-made-you-persona-box:focus p {
+  color: var(--payo-fore-white);
+}
+.payo-made-you-persona-box.persona-box-first {
+  margin-right: 15px;
+}
+.payo-made-you-persona-box.persona-box-second {
+  margin-left: 15px;
+}
+.payo-graphical-wrapper.linear-circle-made-you img {
+  filter: brightness(0);
+}
+.payo-graphical-wrapper.linear-circle-made-you {
+  top: 5%;
+}
+.payo-looks {
+  padding: 100px 0;
+}
+.payo-looks-head {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.payo-looks-head h2 {
+  text-align: center;
+  font-family: metropolis;
+  color: #000;
+  font-size: 25px;
+  line-height: 36px;
+}
+.payo-looks-head p {
+  color: var(--payo-fore-gray);
+  font-family: ws-regular;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 25px 0 40px;
+  text-align: center;
+}
+.payo-looks-content-wrapper {
+  padding-right: 40px;
+}
+.payo-looks-content-wrapper h3 {
+  font-size: 25px;
+  font-family: metropolis;
+  color: #000;
+  line-height: 32px;
+}
+.payo-looks-content-wrapper p {
+  margin: 0;
+  padding: 15px 0;
+  font-size: 15px;
+  font-family: ws-regular;
+  color: #666;
+  line-height: 25px;
+}
+.payo-looks-content-wrapper a {
+  display: inline-block;
+  font-size: 15px;
+  font-family: ws-semibold;
+  color: var(--payo-primary);
+  background-color: var(--payo-secondary);
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-looks-content-wrapper a:hover,
+.payo-looks-content-wrapper a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.payo-looks-image-slide-wrapper {
+  max-width: 550px;
+  width: 100%;
+}
+.payo-looks-graphic-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.payo-looks-graphics-number {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.payo-looks-graphics-number:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: var(--payo-primary);
+  bottom: 0;
+  top: 0;
+  left: 50%;
+}
+.payo-looks-graphic-list {
+  font-size: 30px;
+  font-family: metropolis;
+  line-height: 42px;
+  padding: 0 0 20px;
+  color: #01224463;
+  z-index: 3;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  opacity: 1;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-looks-graphic-list:hover,
+.payo-looks-graphic-list:focus {
+  color: var(--payo-primary);
+  text-decoration: none;
+}
+.payo-looks-graphic-list.payo-looks-active + a {
+  padding-top: 10px;
+}
+.payo-looks-graphic-list.list-last-step.payo-looks-active {
+  margin-bottom: 0;
+  margin-top: 90px;
+}
+.payo-looks-graphic-list.payo-looks-active {
+  color: var(--payo-primary);
+  opacity: 1;
+  margin-bottom: 90px;
+}
+.payo-success-form {
+  padding: 85px 0;
+  position: relative;
+}
+.payo-success-image {
+  border-radius: 50%;
+  max-width: 500px;
+}
+.payo-success-form-wrapper {
+  padding-top: 80px;
+}
+.payo-success-form-wrapper h2 {
+  font-size: 25px;
+  font-family: metropolis;
+  color: #000;
+  text-align: center;
+  line-height: 36px;
+  padding-bottom: 10px;
+}
+.payo-success-form-wrapper p {
+  text-align: center;
+  color: #666;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: ws-regular;
+  padding: 5px 0 30px;
+}
+.payo-success-form-wrapper {
+  padding-top: 80px;
+}
+.payo-success-form-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+.payo-success-form-wrapper input[type="email"] {
+  text-align: center;
+  font-family: ws-regular;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 35px;
+  background-color: #e7f1fb;
+  border: 0;
+  margin-bottom: 15px;
+}
+.payo-success-form-wrapper input[type="email"]:focus {
+  outline: 0;
+}
+.payo-success-form-wrapper input[type="email"]::placeholder {
+  opacity: 1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-success-form-wrapper input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+.payo-success-form-wrapper a {
+  background-color: var(--payo-secondary);
+  font-family: ws-semibold;
+  color: var(--payo-primary);
+  font-size: 15px;
+  padding: 15px 60px;
+  border-radius: 35px;
+  margin: 0 60px;
+  display: inline-block;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-success-form-wrapper a:hover,
+.payo-success-form-wrapper a:focus {
+  outline: 0;
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+}
+.payo-graphical-wrapper.dot-square-success {
+  left: -7%;
+  top: 20%;
+  opacity: 0.7;
+}
+.payo-graphical-wrapper.lined-circle-success {
+  left: 5%;
+  bottom: 5%;
+}
+.payo-testimonials {
+  padding: 150px 0 60px;
+  position: relative;
+}
+.payo-testimonials h2 {
+  font-size: 25px;
+  line-height: 36px;
+  font-family: metropolis;
+  color: #000;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.payo-testimonials-body-wrapper {
+  padding: 65px 0 40px;
+}
+.payo-testimonial-box p {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  font-style: italic;
+  line-height: 25px;
+  color: #000;
+}
+.payo-testimonial-box span {
+  font-family: metropolis, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+}
+.payo-testimonial-box {
+  text-align: center;
+  padding: 0 15px;
+  position: realtive;
+}
+.payo-testimonial-box > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.payo-testimonial-box i {
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+}
+.payo-testimonials-link-wrapper {
+  text-align: center;
+}
+.payo-testimonials-link-wrapper a {
+  font-size: 15px;
+  font-family: metropolis;
+  color: var(--payo-primary);
+  background-color: var(--payo-secondary);
+  padding: 15px 40px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-testimonials-link-wrapper a:hover,
+.payo-testimonials-link-wrapper a:focus {
+  color: var(--payo-secondary);
+  background-color: var(--payo-primary);
+  text-decoration: none;
+}
+.payo-graphical-wrapper.dot-square-testimonial {
+  top: -5%;
+  right: 0;
+  opacity: 0.7;
+}
+.payo-graphical-wrapper.quote-testimonial {
+  padding-top: 0;
+  left: -5%;
+}
+.payo-graphical-wrapper.quote-testimonial img {
+  max-height: 70px;
+  object-fit: contain;
+}
+.payo-site-footer {
+  background-color: #ac5300;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top;
+  padding: 100px 0 0;
+  z-index: 5;
+  position: relative;
+}
+.payo-footer-company-details p {
+  margin: 0;
+  padding: 25px 0 20px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  font-family: ws-regular, sans-serif;
+  margin-right: 25px;
+}
+.payo-footer-site-links h4,
+.payo-footer-contact-details h4 {
+  font-family: metropolis, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.payo-footer-site-links ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.payo-footer-site-links ul li {
+  padding: 5px 0;
+}
+.payo-footer-site-links ul li a {
+  font-family: ws-regular;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-footer-site-links ul li a:hover,
+.payo-footer-site-links ul li a:focus {
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.footer-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.footer-company {
+  -ms-flex: 0 0 37%;
+  flex: 0 0 37%;
+  max-width: 37%;
+  padding: 0 15px;
+}
+.site-links {
+  -ms-flex: 0 0 18%;
+  flex: 0 0 18%;
+  max-width: 18%;
+  padding: 0 15px;
+}
+.footer-contact-details {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+.payo-footer-contact-details {
+  display: flex;
+  flex-direction: column;
+}
+.payo-footer-contact-details a {
+  color: #fff;
+  line-height: 25px;
+  display: inline-block;
+  padding: 7px 0;
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-footer-contact-details p {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  line-height: 25px;
+  color: #fff;
+  padding: 7px 0;
+  display: flex;
+  align-items: flex-start;
+}
+.payo-footer-contact-details a:hover,
+.payo-footer-contact-details a:focus {
+  color: var(--payo-secondary);
+}
+.payo-footer-contact-details a > img,
+.payo-footer-contact-details p > img {
+  margin-right: 15px;
+}
+.payo-footer-copyright p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  font-family: ws-regular, sans-serif;
+}
+.payo-footer-copyright {
+  display: flex;
+  padding: 50px 0 10px;
+  justify-content: space-between;
+}
+.payo-copyright-socials a {
+  margin: 0 15px;
+  display: inline-block;
+}
+.payo-copyright-socials a > img {
+  max-width: 35px;
+  width: 100%;
+}
+.payo-careers-template-wrapper,
+.payo-privary-template-wrapper {
+  background-color: #fff;
+}
+.payo-careers-main-banner,
+.payo-careers-main-body {
+  position: relative;
+}
+.payo-careers-banner-wrapper {
+  padding: 150px 0;
+}
+.payo-careers-banner-content h1 {
+  font-size: 35px;
+  line-height: 50px;
+  color: #000;
+  font-family: metropolis;
+}
+.payo-vacancy-boxWrap {
+  margin-bottom: 20px;
+}
+.payo-careers-banner-content {
+  padding-right: 45px;
+}
+.payo-careers-banner-content p {
+  margin: 0;
+  padding: 25px 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+}
+.payo-careers-banner-content a {
+  font-size: 15px;
+  font-family: ws-semibold;
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  padding: 10px 50px;
+  display: inline-block;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-careers-banner-content a:hover,
+.payo-careers-banner-content a:focus {
+  color: var(--payo-secondary);
+  background-color: var(--payo-primary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-graphical-wrapper.career-banner-zigzag-left {
+  top: 15%;
+  left: 5%;
+}
+.payo-graphical-wrapper.career-banner-zigzag-right {
+  right: 7%;
+  bottom: 2%;
+}
+.payo-careers-main-body {
+  padding: 100px 0;
+}
+.payo-careers-main-body h2 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 36px;
+  color: #000;
+  font-family: metropolis;
+  padding-bottom: 35px;
+}
+.payo-careers-vacancy-list {
+  padding: 70px 0 50px;
+}
+.payo-vacancy-box a:hover,
+.payo-vacancy-box a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.payo-vacancy-box {
+  background-color: #e7f1fb;
+  padding: 30px 40px;
+  border-radius: 5px;
+  margin: 5px 0 20px;
+  position: relative;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-vacancy-box h3 {
+  font-size: 20px;
+  color: #000;
+  padding: 20px 0;
+  line-height: 32px;
+  font-family: metropolis, sans-serif;
+  margin: 0;
+}
+.payo-vacancy-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+  line-height: 25px;
+  font-family: ws-regular, sans-serif;
+  overflow-wrap: break-word;
+}
+.payo-vacancy-box img,
+.payo-vacancy-box h3,
+.payo-vacancy-box p {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-vacancy-box img,
+.payo-vacancy-box h3,
+.payo-vacancy-box p {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-vacancy-box:hover img,
+.payo-vacancy-box:focus img {
+  filter: brightness(0) invert(1);
+}
+.payo-graphical-wrapper.career-body-eclipse {
+  top: 5%;
+}
+.payo-graphical-wrapper.career-body-half-dotted {
+  top: 20%;
+  opacity: 0.7;
+}
+.payo-careers-main-process {
+  padding: 20px 0 125px;
+}
+.payo-careers-main-process h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+  line-height: 36px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  padding-bottom: 40px;
+}
+.payo-careers-application-wrapper {
+  padding: 10px 0 50px;
+}
+.application-step-box {
+  padding: 35px 15px;
+}
+.application-step-box p:first-child {
+  margin: 0;
+  font-size: 20px;
+  font-family: ws-semibold, sans-serif;
+  color: #000;
+  line-height: 32px;
+  background-color: var(--payo-secondary);
+  max-width: 55px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50%;
+}
+.application-process-name {
+  padding: 20px 0;
+}
+.application-process-name span {
+  font-size: 20px;
+  font-family: metropolis, sans-serif;
+  line-height: 32px;
+  color: #000;
+}
+.application-process-name h3 {
+  margin: 0;
+  font-size: 30px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 42px;
+}
+.application-step-box p:last-child {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  color: #666;
+  line-height: 25px;
+  margin: 0;
+}
+#applicationForm .modal-content {
+  background-color: var(--payo-primary);
+}
+#applicationForm .modal-header {
+  border: none;
+  padding: 20px 25px;
+}
+#applicationForm .modal-title {
+  color: #fff;
+  font-family: var(--payo-metropolis);
+  font-size: 24px;
+}
+#applicationForm .modal-header .close {
+  color: #fff;
+  font-size: 24px;
+}
+.payo-application-form-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 0;
+}
+.payo-application-form-main-wrapper input[type="text"],
+.payo-application-form-main-wrapper textarea,
+.payo-application-form-main-wrapper select {
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  font-family: ws-regular;
+}
+.payo-application-form-main-wrapper label {
+  font-size: 15px;
+  color: #fff;
+  font-family: ws-semibold, sans-serif;
+}
+.payo-application-form-main-wrapper input[type="file"] {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-family: ws-regular;
+  color: #fff;
+}
+.payo-application-form-main-wrapper input[type="submit"] {
+  font-family: ws-semibold;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 35px;
+  margin: 0;
+  background-color: var(--payo-secondary);
+  border: 0;
+  color: var(--payo-primary);
+  width: 100%;
+  margin-top: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-application-form-main-wrapper input[type="submit"]:hover,
+.payo-application-form-main-wrapper input[type="submit"]:focus {
+  background-color: #ffdd6f;
+}
+.payo-vacancy-floater-box {
+  position: absolute;
+  background-color: var(--payo-primary);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-vacancy-box:hover > .payo-vacancy-floater-box {
+  opacity: 1;
+  z-index: 5;
+}
+.payo-vacancy-floater-box a:first-child {
+  font-size: 15px;
+  font-family: ws-semibold;
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  padding: 10px 40px;
+  display: inline-block;
+  border-radius: 35px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-vacancy-floater-box a:last-child {
+  border: 1px solid var(--payo-secondary);
+  color: var(--payo-secondary);
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  padding: 10px 40px;
+  border-radius: 30px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-vacancy-floater-box a:hover {
+  opacity: 0.8;
+}
+.payo-privacy-template-wrapper {
+  padding: 80px 0 100px;
+}
+.payo-privacy-content h1 {
+  font-size: 35px;
+  color: #000;
+  font-family: metropolis, sans-serif;
+  line-height: 50px;
+  margin: 0;
+  padding-bottom: 35px;
+}
+.payo-privacy-content-wrapper {
+  padding: 40px 0;
+  position: relative;
+}
+.payo-privacy-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: var(--payo-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 40px;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0 2px #0000005c;
+  transition: 0.35s;
+  -webkit-transition: 0.35s;
+  -moz-transition: 0.35s;
+}
+.payo-privacy-sticky.show-sticky {
+  z-index: 10;
+  opacity: 1;
+}
+.payo-privacy-sticky p {
+  font-size: 28px;
+  color: #fff;
+  font-family: metropolis;
+  margin: 0;
+}
+.payo-privacy-content-wrapper p {
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+.payo-privacy-content-wrapper h2 {
+  font-size: 25px;
+  line-height: 36px;
+  color: #000;
+  font-family: ws-regular, sans-serif;
+  padding: 40px 0 15px;
+}
+.payo-privacy-content-wrapper h3 {
+  font-size: 18px;
+  font-family: ws-regular;
+  padding: 20px 0 10px;
+  color: #000;
+  line-height: 32px;
+}
+.payo-privacy-content-wrapper ul li,
+.payo-privacy-content-wrapper ol li {
+  font-family: ws-regular, sans-serif;
+}
+.payo-privacy-content-wrapper .payo-privacy-devices-links {
+  padding: 0;
+  list-style-type: none;
+  column-count: 3;
+}
+.payo-privacy-content-wrapper .payo-privacy-devices-links a {
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+  padding: 5px 0;
+  font-size: 15px;
+  line-height: 25px;
+}
+.payo-privacy-content-wrapper a {
+  color: var(--payo-primary);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-privacy-content-wrapper a:hover,
+.payo-privacy-content-wrapper a:focus {
+  color: #000;
+  text-decoration: none;
+}
+.payo-terms-conditions-pdf-download-link a {
+  background-color: var(--payo-secondary);
+  padding: 20px 40px;
+  display: inline-block;
+  margin-top: 35px;
+  font-weight: 600;
+  border-radius: 35px;
+}
+.payo-faqs-body {
+  padding: 105px 0;
+}
+.payo-faqs-content-header h1 {
+  font-size: 35px;
+  line-height: 50px;
+  color: #000;
+  font-family: metropolis, sans-serif;
+  margin: 0;
+}
+.payo-faqs-content-header p {
+  margin: 0;
+  padding: 20px 0 40px;
+  font-size: 15px;
+  line-height: 28px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+}
+.payo-faqs-content-body {
+  padding: 20px 0;
+}
+.payo-faqs-question-panel {
+  padding-left: 60px;
+}
+.payo-faqs-tabs {
+  display: flex;
+  flex-direction: column;
+}
+.payo-faqs-tabs .payo-faqs-tab-link {
+  display: inline-block;
+  background-color: #e6edf4;
+  color: var(--payo-primary);
+  font-size: 18px;
+  font-family: ws-regular;
+  padding: 20px 25px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-faqs-tabs .payo-faqs-tab-link:not(.faq-active):hover,
+.payo-faqs-tabs .payo-faqs-tab-link:not(.faq-active):focus {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-faqs-tab-link.faq-active {
+  color: #fff;
+  background-color: var(--payo-primary);
+  cursor: none;
+  text-decoration: none;
+}
+.question-list .card {
+  border: 0;
+  margin-bottom: 15px;
+}
+.question-header button {
+  font-size: 25px;
+  font-family: ws-regular;
+  color: var(--payo-primary);
+  padding: 15px 25px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.question-header button > i {
+  color: #666;
+  font-size: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.question-header button:hover,
+.question-header button:focus {
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  color: var(--payo-primary);
+  box-shadow: none;
+}
+.card-body {
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+.payo-inquire-template-wrapper {
+  padding: 85px 0 150px;
+  position: relative;
+}
+.payo-inquire-form-wrapper {
+  background-color: var(--payo-primary);
+  padding: 60px 85px;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+}
+.payo-inquire-form-wrapper h1 {
+  margin: 0;
+  padding-bottom: 25px;
+  color: #fff;
+  font-family: metropolis, sans-serif;
+  font-size: 35px;
+  line-height: 50px;
+}
+.payo-inquire-form-wrapper form p {
+  width: 100%;
+}
+.payo-inquire-form-wrapper input[type="text"],
+.payo-inquire-form-wrapper input[type="email"],
+.payo-inquire-form-wrapper input[type="number"],
+.payo-inquire-form-wrapper textarea {
+  width: 100%;
+  background-color: #003b77;
+  border: 0;
+  padding: 15px 25px;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.payo-inquire-form-wrapper select {
+  width: 100%;
+  background-color: #003b77;
+  border: 0;
+  padding: 15px 20px;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.payo-inquire-form-wrapper input[type="text"]:focus,
+.payo-inquire-form-wrapper input[type="email"]:focus,
+.payo-inquire-form-wrapper input[type="number"]:focus,
+.payo-inquire-form-wrapper textarea:focus {
+  outline: 0;
+}
+.payo-inquire-form-wrapper input[type="text"]::placeholder,
+.payo-inquire-form-wrapper input[type="email"]::placeholder,
+.payo-inquire-form-wrapper input[type="number"]::placeholder,
+.payo-inquire-form-wrapper textarea::placeholder {
+  color: #3a6896;
+  opacity: 1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-inquire-form-wrapper input[type="text"]:focus::placeholder,
+.payo-inquire-form-wrapper input[type="email"]:focus::placeholder,
+.payo-inquire-form-wrapper input[type="number"]:focus::placeholder,
+.payo-inquire-form-wrapper textarea:focus::placeholder {
+  opacity: 0;
+}
+.payo-inquire-form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.payo-inquiry-submit-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.payo-inquiry-submit-wrapper input[type="submit"] {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  padding: 20px 60px;
+  border-radius: 35px;
+  background-color: var(--payo-secondary);
+  border: 0;
+  color: var(--payo-primary);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-inquiry-submit-wrapper input[type="submit"]:hover,
+.payo-inquiry-submit-wrapper input[type="submit"]:focus {
+  opacity: 0.8;
+  outline: 0;
+}
+.payo-inquiry-recaptcha-wrapper {
+  margin-bottom: 15px;
+}
+.payo-inquire-content-wrapper {
+  padding-top: 100px;
+  padding-left: 40px;
+}
+.payo-inquire-content-wrapper h2 {
+  font-family: metropolis, sans-serif;
+  font-size: 25px;
+  line-height: 36px;
+  color: #000;
+  padding-bottom: 10px;
+}
+.payo-inquire-content-wrapper p {
+  font-size: 25px;
+  font-family: ws-regular, sans-serif;
+  line-height: 42px;
+  color: #000;
+}
+.payo-inquire-content-wrapper a {
+  background-color: var(--payo-secondary);
+  font-family: ws-semibold;
+  color: var(--payo-primary);
+  font-size: 15px;
+  padding: 15px 60px;
+  border-radius: 35px;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-inquire-content-wrapper a:hover,
+.payo-inquire-content-wrapper a:focus {
+  color: var(--payo-secondary);
+  background-color: var(--payo-primary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-inquire-type-selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.payo-inquire-type-selector-child {
+  background-color: var(--payo-secondary);
+  font-family: ws-semibold;
+  color: var(--payo-primary);
+  font-size: 15px;
+  padding: 15px 40px;
+  width: 100%;
+  border-radius: 35px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-inquire-type-selector-child:hover,
+.payo-inquire-type-selector-child:focus {
+  opacity: 0.8;
+  color: var(--payo-primary);
+  text-decoration: none;
+}
+.payo-graphical-wrapper.inquire-graphic {
+  bottom: -18%;
+  right: 0;
+  z-index: 1;
+}
+.payo-graphical-wrapper.inquire-half-circle {
+  top: -10%;
+}
+.payo-ecom-main-banner {
+  padding: 150px 0 50px;
+  position: relative;
+}
+.payo-ecomm-banner-content h1 {
+  font-size: 35px;
+  line-height: 50px;
+  padding-bottom: 20px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+}
+.payo-ecomm-banner-content p {
+  font-size: 15px;
+  line-height: 28px;
+  font-family: ws-regular, sans-serif;
+  color: #666;
+}
+.payo-ecomm-banner-content a {
+  font-size: 15px;
+  display: inline-block;
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+  background-color: var(--payo-secondary);
+  padding: 15px 40px;
+  border-radius: 35px;
+  margin-top: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-ecomm-banner-content a:hover,
+.payo-ecomm-banner-content a:focus {
+  color: var(--payo-secondary);
+  background-color: var(--payo-primary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-graphical-wrapper.ecommerce-banner-wave {
+  top: 0;
+  right: 0;
+}
+.payo-graphical-wrapper.ecomm-banner-graphic {
+  right: 0;
+  top: 10%;
+}
+.payo-ecomm-banner-content {
+  padding-right: 35px;
+}
+.payo-ecom-importance {
+  padding: 150px 0;
+  position: relative;
+}
+.payo-graphical-wrapper.ecomm-importance-graphic {
+  top: 15%;
+}
+.payo-ecom-importance-content h2,
+.payo-ecom-solutions-content h2 {
+  font-size: 25px;
+  color: var(--payo-primary);
+  line-height: 36px;
+  font-family: metropolis, sans-serif;
+  padding-bottom: 25px;
+}
+.payo-ecom-importance-content p,
+.payo-ecom-solutions-content p {
+  font-size: 15px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  line-height: 28px;
+}
+.payo-ecom-solutions {
+  padding: 125px 0;
+}
+.payo-ecom-solutions-graphic {
+  position: relative;
+}
+.payo-ecom-automation-cta {
+  background-image: url(../img/background/ecom-auto-cta.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.payo-ecom-automation-cta h2 {
+  color: #fff;
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  line-height: 36px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.payo-ecom-automation-cta a {
+  display: inline-block;
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  border: 1px solid var(--payo-secondary);
+  margin-top: 25px;
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  line-height: 25px;
+  padding: 15px 40px;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-ecom-automation-cta a:hover,
+.payo-ecom-automation-cta a:focus {
+  background-color: transparent;
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.payo-graphical-wrapper.lined-circle-success.ecom-auto-success {
+  left: 15%;
+  bottom: 5%;
+}
+.payo-graphical-wrapper.dot-square-success.ecom-auto-success {
+  left: 5%;
+  top: 30%;
+  opacity: 0.7;
+}
+.payo-contact-main-banner {
+  padding: 150px 0;
+  position: relative;
+}
+.payo-contact-banner-content h1 {
+  font-size: 35px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 48px;
+  padding-bottom: 30px;
+}
+.payo-contact-banner-list p {
+  background-color: #ebeff3;
+  padding: 20px 25px;
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 32px;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+}
+.payo-contact-banner-list p > img {
+  margin-right: 25px;
+}
+.payo-graphical-wrapper.contact-form-eclipse {
+  bottom: 20%;
+}
+.payo-graphical-wrapper.contact-form-arrows {
+  bottom: 45%;
+  left: 8%;
+}
+.payo-graphical-wrapper.contact-form-graphic {
+  top: -30%;
+  right: 5%;
+}
+.payo-contact-banner-form {
+  background-color: var(--payo-secondary);
+  padding: 70px 65px 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 0 50px 5px 50px;
+}
+.payo-contact-banner-form-wrapper {
+  margin-left: 50px;
+  margin-top: 125px;
+  position: relative;
+}
+.payo-contact-form-body {
+  background-color: var(--payo-secondary);
+}
+.payo-contact-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a3e64;
+  text-align: center;
+}
+.payo-contact-progress-bar::before {
+  content: "";
+  height: 100%;
+  width: 10%;
+  background-color: var(--payo-secondary);
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-contact-progress-bar span {
+  font-size: 12px;
+  font-family: ws-regular, sans-serif;
+  color: #fff;
+}
+.payo-contact-form-body h2 {
+  font-size: 25px;
+  color: var(--payo-primary);
+  font-family: metropolis, sans-serif;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.payo-contact-form-body form {
+  padding: 25px 0;
+}
+.payo-contact-form-body form > label {
+  color: #fff;
+  font-size: 20px;
+  font-family: ws-regular;
+  line-height: 28px;
+  padding-bottom: 15px;
+}
+.payo-contact-form-body p {
+  color: #fff;
+  font-family: ws-semibold;
+  text-align: center;
+  font-size: 15px;
+}
+.payo-contact-form-body p > a {
+  color: var(--payo-secondary);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-contact-form-body p > a:hover,
+.payo-contact-form-body p > a:focus {
+  color: #cba014;
+}
+.payo-contact-selectors {
+  display: flex;
+  flex-direction: column;
+}
+.payo-contact-selectors > button {
+  background-color: #caddf0;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  padding: 20px 10px;
+  border: 0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.payo-contact-actions {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payo-contact-actions button[type="submit"] {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  background-color: var(--payo-secondary);
+  border: 1px solid var(--payo-secondary);
+  color: var(--payo-primary);
+  border: 0;
+  padding: 15px 50px;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-contact-actions a {
+  color: #8c9eaf;
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  line-height: 25px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-contact-actions a:hover,
+.payo-contact-actions a:focus {
+  outline: 0;
+  text-decoration: none;
+  color: #fff;
+}
+.payo-contact-actions button[type="submit"]:hover,
+.payo-contact-actions button[type="submit"]:focus {
+  border: 1px solid #fff;
+  color: #fff;
+  outline: 0;
+  background-color: transparent;
+}
+.payo-graphical-wrapper.contact-banner-circle {
+  top: 5%;
+}
+.payo-graphical-wrapper.contact-side-eclipse {
+  right: 0;
+  bottom: 20%;
+  z-index: 0;
+}
+.payo-graphical-wrapper.contact-form-arrows-invert {
+  right: 5%;
+  bottom: 30%;
+}
+.payo-contact-sets-apart {
+  padding: 50px 0 150px;
+}
+.payo-contact-sets-apart-header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/graphics/what-set-us-apart-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.payo-contact-sets-apart-header h2 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 36px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  margin: 0;
+}
+.payo-graphical-wrapper.apart-side-dotted-square {
+  left: 8%;
+  opacity: 0.7;
+}
+.payo-contact-sets-apart-body {
+  padding: 165px 0 100px;
+}
+.payo-contact-sets-apart-box {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+  position: relative;
+  z-index: 2;
+}
+.payo-contact-sets-apart-box img {
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.payo-contact-sets-apart-box h4 {
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 36px;
+  padding: 5px 0;
+  margin: 0;
+}
+.payo-contact-sets-apart-box p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  font-family: ws-regular, sans-serif;
+  margin: 0;
+}
+.payo-contact-sets-apart-body-wrapper {
+  padding: 15px 0 40px;
+}
+.payo-contact-sets-apart-body-wrapper.wrapper-between {
+  justify-content: space-between;
+}
+.payo-contact-sets-apart-body-wrapper.wrapper-around {
+  justify-content: space-around;
+}
+.payo-graphical-wrapper.contact-background-bottom-left {
+  bottom: 10%;
+}
+.payo-graphical-wrapper.contact-background-bottom-right {
+  right: 0;
+  top: 45%;
+  z-index: 0;
+}
+.payo-graphical-wrapper.contact-yellow-side-dot {
+  right: 10%;
+  bottom: 15%;
+  opacity: 0.7;
+}
+.payo-featured-post-image img {
+  max-height: 500px;
+  margin: 0 auto;
+  display: block;
+}
+.payo-featured-blog {
+  background-image: url(../img/background/featured-blog-background.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1050px;
+  margin-top: -125px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.payo-featured-wrapper {
+  padding-bottom: 350px;
+  position: relative;
+}
+.payo-featured-post-image {
+  overflow: hidden;
+  border-radius: 50px 10px 50px 10px;
+}
+.payo-featured-post-data {
+  padding-left: 50px;
+}
+.payo-featured-post-data p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: ws-regular, sans-serif;
+  margin: 0;
+}
+.payo-featured-post-data h2 {
+  font-size: 25px;
+  line-height: 36px;
+  font-family: metropolis, sans-serif;
+  color: #fff;
+  padding: 15px 0;
+  margin: 0;
+}
+.payo-featured-post-data a {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  line-height: 25px;
+  background-color: var(--payo-secondary);
+  border: 1px solid var(--payo-secondary);
+  color: var(--payo-primary);
+  padding: 15px 40px;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-featured-post-data a:hover,
+.payo-featured-post-data a:focus {
+  background-color: transparent;
+  color: var(--payo-secondary);
+  outline: 0;
+  text-decoration: none;
+}
+.payo-graphical-wrapper.featured-dots-left {
+  top: 7%;
+  left: 5%;
+  opacity: 0.7;
+}
+.payo-graphical-wrapper.featured-dots-right {
+  right: 1%;
+  bottom: 25%;
+  opacity: 0.7;
+}
+.payo-graphical-wrapper.featured-arrows {
+  left: 30%;
+  bottom: 30%;
+}
+.payo-other-articles {
+  padding: 100px 0 80px;
+}
+.payo-other-articles-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.payo-other-articles-heading h1 {
+  color: #000;
+  font-size: 35px;
+  line-height: 50px;
+  font-family: metropolis, sans-serif;
+  margin: 0;
+}
+.payo-other-articles-heading form {
+  background-color: #edf3f9;
+  padding: 15px 40px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0 3px 3px 5px #edf3f9a8;
+}
+.payo-other-articles-heading form input[type="text"] {
+  max-width: 400px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 0;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 0;
+  font-family: ws-regular;
+  color: var(--payo-primary);
+  font-size: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-other-articles-heading form input[type="text"]:focus {
+  border-bottom: 1px solid var(--payo-primary);
+  outline: 0;
+}
+.payo-other-articles-heading form input[type="text"]::placeholder {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  opacity: 1;
+  color: var(--payo-primary);
+}
+.payo-other-articles-heading form input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+.payo-other-articles-heading form button[type="submit"] {
+  font-size: 18px;
+  background-color: transparent;
+  border: 0;
+  color: #666;
+  padding: 10px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-other-articles-heading form button[type="submit"]:hover,
+.payo-other-articles-heading form button[type="submit"]:focus {
+  outline: 0;
+  color: #000;
+}
+.payo-other-articles-body {
+  padding: 25px 0;
+}
+.payo-first-other-articles,
+.payo-second-other-articles,
+.payo-third-other-articles {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15px 0 30px;
+}
+.payo-third-other-articles {
+  justify-content: left;
+}
+.payo-first-other-articles .payo-other-article-box,
+.payo-third-other-articles .payo-other-article-box {
+  width: 30%;
+  margin: 0 10px;
+}
+.payo-other-article-box {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 400px;
+}
+.payo-other-article-box.article-background {
+  background-image: url(../img/first-other-article-placeholder.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 50px;
+}
+.payo-other-article-box.second-article-background {
+  background-image: url(../img/first-secondary-placeholder.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 40%;
+  height: 300px;
+  margin: 0 10px;
+}
+.payo-other-article-box.second-article-image {
+  background-image: url(../img/first-secondary-placeholder.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  width: 25%;
+  height: 300px;
+  margin: 0 15px;
+}
+.payo-other-article-box.article-background:before,
+.payo-other-article-box.second-article-background:before {
+  content: "";
+  background-color: #012244ad;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.payo-other-article-box.second-article-image:before {
+  content: "";
+  background-color: #00000029;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.second-article-background .post-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.article-background .author-date,
+.second-article-background .author-date,
+.second-article-background .post-description {
+  margin: 0;
+  padding: 0 20px;
+  font-size: 15px;
+  color: #fff;
+  font-family: ws-regular, sans-serif;
+  line-height: 25px;
+  z-index: 1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.article-background h3,
+.second-article-background h3 {
+  font-size: 20px;
+  font-family: metropolis, sans-serif;
+  color: #fff;
+  z-index: 1;
+  padding: 10px 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.second-article-background .post-description span {
+  color: var(--payo-secondary);
+  font-family: ws-semibold, sans-serif;
+}
+.second-article-background a {
+  z-index: 1;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.second-article-background a:hover,
+.second-article-background a:focus {
+  text-decoration: none;
+}
+.second-article-background a:hover h3,
+.second-article-background a:hover .author-date,
+.second-article-background a:hover .post-description,
+.second-article-background a:focus h3,
+.second-article-background a:focus .author-date,
+.second-article-background a:focus .post-description {
+  color: var(--payo-secondary);
+}
+.article-background a {
+  display: inline-block;
+  background-color: var(--payo-secondary);
+  z-index: 1;
+  max-width: 45%;
+  padding: 10px 30px;
+  border-radius: 0 20px 20px 0;
+  color: var(--payo-primary);
+  text-align: left;
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.article-background a:hover,
+.article-background a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+  outline: 0;
+}
+.article-normal .payo-article-image {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.article-normal img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.article-normal a:hover,
+.article-normal a:focus {
+  text-decoration: none;
+}
+.article-normal a:hover img,
+.article-normal a:focus img {
+  transform: scale(1.25);
+}
+.article-normal .author-date,
+.second-article-image .author-date {
+  margin: 0;
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  color: #000;
+  line-height: 25px;
+}
+.article-normal h3,
+.second-article-image h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: metropolis, sans-serif;
+  line-height: 28px;
+  padding: 5px 0;
+  color: #000;
+}
+.second-article-image h3,
+.second-article-image .author-date,
+.second-article-image a {
+  color: #fff;
+  z-index: 1;
+  text-decoration: none;
+}
+.article-normal .post-description {
+  margin: 0;
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  line-height: 25px;
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.article-normal .post-description span {
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+}
+.payo-other-article-box.second-article-image {
+  width: 30%;
+}
+.payo-blog-loader-more {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  font-family: ws-semibold;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-blog-loader-more:hover,
+.payo-blog-loader-more:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+}
+.payo-services-banner {
+  background-image: url(../img/background/services-banner-background.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 885px;
+  margin-top: -125px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.payo-services-banner-middle-image {
+  display: block;
+  margin: 0 auto;
+}
+.payo-services-banner-content {
+  padding-right: 30px;
+}
+.payo-services-banner-content h1 {
+  font-size: 35px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 50px;
+  padding-bottom: 15px;
+}
+.payo-services-banner-content p {
+  font-size: 15px;
+  line-height: 28px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  margin-bottom: 20px;
+}
+.payo-services-banner-content a {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  padding: 15px 40px;
+  border-radius: 35px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-services-banner-content a:hover,
+.payo-services-banner-content a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-graphical-wrapper.services-header {
+  bottom: -7%;
+  right: 0;
+  left: 0;
+  padding: 0 135px;
+}
+.payo-services-body {
+  padding: 115px 0 125px;
+  position: relative;
+}
+.payo-services-body-head {
+  padding-bottom: 65px;
+}
+.payo-services-body-head h2 {
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  line-height: 36px;
+  color: #000;
+}
+.payo-services-body-head p {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  color: #666;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+.payo-services-body-head a {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  padding: 15px 25px;
+  display: inline-block;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-services-body-head a:hover,
+.payo-services-body-head a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-graphical-wrapper.services-body-dots-right {
+  right: 2%;
+  top: 10%;
+  opacity: 0.7;
+}
+.payo-services-content-box {
+  padding-right: 30px;
+}
+.payo-services-content-box img {
+  max-width: 80px;
+  width: 100%;
+}
+.payo-services-content-box h4 {
+  margin: 0;
+  padding: 15px 0;
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  color: #284270;
+  line-height: 36px;
+}
+.payo-services-content-box p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: ws-regular, sans-serif;
+  color: #666;
+}
+.payo-graphical-wrapper.services-inner-circle {
+  right: 0;
+  bottom: 0;
+}
+.payo-graphical-wrapper.services-bottom-dots {
+  right: 25%;
+  opacity: 0.7;
+}
+.payo-graphical-wrapper.services-side-left-dots {
+  bottom: 25%;
+  left: 5%;
+  opacity: 0.7;
+}
+.payo-services-body-head-link {
+  text-align: right;
+}
+.payo-services-banner.cash-on-delivery-philippines {
+  height: 1000px;
+}
+.payo-shopify-video,
+.payo-woocommerce-integration-process {
+  padding: 80px 0;
+  text-align: center;
+}
+.payo-shopify-video h3,
+.payo-woocommerce-integration-process h2 {
+  font-size: 28px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 50px;
+  padding-bottom: 15px;
+}
+.payo-woocommerce-integration-process h3 {
+  font-size: 20px;
+  font-family: metropolis, sans-serif;
+  color: #284270;
+  line-height: 36px;
+  padding-bottom: 15px;
+}
+.payo-woocommerce-integration-process ol {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  line-height: 25px;
+  padding-bottom: 15px;
+  color: #666;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 15px;
+}
+.payo-woocommerce-integration-process h4 {
+  font-size: 18px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 28px;
+  text-align: left;
+  padding: 10px 0 20px;
+}
+.payo-woocommerce-integration-process p {
+  font-size: 15px;
+  font-family: ws-regular;
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 28px;
+}
+.payo-about-banner {
+  background-image: url(../img/background/about-us-banner.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin-top: -125px;
+  height: 785px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.payo-about-history {
+  background-image: url(../img/background/about-history-background.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 915px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.payo-about-mission-vision {
+  background-image: url(../img/background/mission-vision-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 820px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.payo-about-banner-content h1 {
+  font-size: 35px;
+  color: #000;
+  line-height: 50px;
+  font-family: metropolis, sans-serif;
+  margin: 0;
+  padding-bottom: 15px;
+}
+.payo-about-banner-content p {
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  color: #666;
+}
+.payo-about-banner-content a {
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 15px;
+  display: inline-block;
+  color: var(--payo-primary);
+  background-color: var(--payo-secondary);
+  padding: 15px 45px;
+  border-radius: 35px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-about-banner-content a:hover,
+.payo-about-banner-content a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+}
+.payo-graphical-wrapper.about-graphic-banner {
+  right: 0;
+  bottom: 10%;
+}
+.payo-trusted-partners-list.about-us-inside {
+  padding: 125px 0 80px;
+}
+.payo-trusted-partners-list.about-us-inside h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+.payo-about-history h2 {
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  padding-bottom: 40px;
+}
+.payo-history-panel {
+  padding: 25px 0;
+}
+.payo-history-panel h4 {
+  font-size: 35px;
+  font-family: metropolis, sans-serif;
+  color: #fff;
+  line-height: 48px;
+  padding-bottom: 10px;
+}
+.payo-history-panel p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  font-family: ws-regular, sans-serif;
+}
+.payo-history-graphics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.payo-history-image {
+  position: relative;
+  padding: 0 40px;
+}
+.payo-history-list-selector {
+  max-width: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+  position: relative;
+}
+.payo-history-list-selector::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  right: 0;
+  background-color: #fff;
+  opacity: 0.5s;
+  z-index: 0;
+}
+.payo-history-panel-selector {
+  font-size: 30px;
+  color: #b3bfcb;
+  padding: 10px;
+  font-family: metropolis, sans-serif;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: #00274f;
+}
+.payo-history-panel-selector:hover,
+.payo-history-panel-selector:focus {
+  text-decoration: none;
+  outline: 0;
+  color: var(--payo-secondary);
+}
+.payo-history-panel-selector.history-selector-active {
+  opacity: 1;
+  color: #fff;
+  margin-bottom: 50px;
+  cursor: unset;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-graphical-wrapper.history-lines-top {
+  top: 15%;
+}
+.payo-history-image img {
+  z-index: 2;
+  position: relative;
+}
+.payo-graphical-wrapper.history-photo-line {
+  bottom: -15%;
+  right: 8%;
+  z-index: 0;
+}
+.payo-about-founder {
+  height: 760px;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  margin-top: 85px;
+  position: relative;
+}
+.payo-about-founder-content h2 {
+  font-size: 25px;
+  line-height: 36px;
+  font-family: metropolis, sans-serif;
+  padding-bottom: 20px;
+  color: #000;
+}
+.payo-about-founder-content p {
+  font-size: 15px;
+  line-height: 28px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+}
+.payo-about-mission-vision-head h2 {
+  font-size: 90px;
+  font-family: metropolis, sans-serif;
+  line-height: 115px;
+  margin: 0;
+  color: #000;
+}
+.payo-about-mission-vision-head h2 > span {
+  color: var(--payo-primary);
+}
+.payo-about-mission-vision-content img {
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 65px;
+  display: block;
+}
+.payo-about-mission-vision-content {
+  margin-left: 85px;
+}
+.payo-about-mission-vision-list div {
+  margin: 25px 0;
+}
+.payo-about-mission-vision-list h4 {
+  font-size: 25px;
+  line-height: 36px;
+  padding-bottom: 15px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  margin: 0;
+}
+.payo-about-mission-vision-list p {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  line-height: 25px;
+  color: #666;
+}
+.payo-about-mission-vision-list div:first-child {
+  border-bottom: 1px solid #000;
+}
+.payo-landing-page-banner {
+  background-image: url(../img/graphics/landing-page-banner.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -125px;
+  height: 1000px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.payo-landing-page-banner-content h1 {
+  font-size: 35px;
+  font-family: metropolis, sans-serif;
+  line-height: 50px;
+  padding-top: 40px;
+  color: #fff;
+  margin: 0;
+}
+.payo-landing-page-banner-content h1 > span {
+  color: var(--payo-secondary);
+}
+.payo-landing-page-banner-form {
+  padding-left: 75px;
+  padding-top: 175px;
+}
+.payo-landing-page-banner-form-head h2 {
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  color: #fff;
+  line-height: 36px;
+}
+.payo-landing-page-banner-form-head p {
+  color: #fff;
+  margin-bottom: 25px;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+.payo-landing-page-form-wrapper {
+  padding: 50px 45px 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--payo-secondary);
+  position: relative;
+  box-shadow: 1px 1px 5px 4px #0000004f;
+}
+.payo-landing-page-form-wrapper form {
+  margin-top: 25px;
+}
+.payo-landing-page-form-wrapper h3 {
+  font-family: metropolis, sans-serif;
+  font-size: 20px;
+  color: var(--payo-primary);
+  margin-bottom: 25px;
+}
+.payo-landing-page-form-wrapper label {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  color: #000;
+  margin-bottom: 20px;
+}
+.payo-landing-page-form-wrapper form > p {
+  background-color: #fff;
+  text-align: center;
+  font-family: ws-regular, sans-serif;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-landing-page-form-wrapper p:hover,
+.payo-landing-page-form-wrapper p:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  cursor: pointer;
+}
+.payo-landing-page-form-actions {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payo-landing-page-form-actions a {
+  color: #8e7010;
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-landing-page-form-actions a:hover,
+.payo-landing-page-form-actions a:focus {
+  color: #000;
+  text-decoration: none;
+  outline: 0;
+}
+.payo-landing-page-form-actions button[type="submit"] {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  color: var(--payo-secondary);
+  background-color: var(--payo-primary);
+  border: 1px solid var(--payo-primary);
+  line-height: 25px;
+  padding: 15px 50px;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-landing-page-form-actions button[type="submit"]:hover,
+.payo-landing-page-form-actions button[type="submit"]:focus {
+  background-color: transparent;
+  color: var(--payo-primary);
+  outline: 0;
+}
+.payo-landing-page-form-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px 0;
+  background-color: #1a3e64;
+}
+.payo-landing-page-form-progress:before {
+  width: 10%;
+  background-color: var(--payo-primary);
+  content: "";
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.payo-landing-page-form-progress p {
+  margin: 0;
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  color: #fff;
+}
+.payo-graphical-wrapper.lp-banner-side-circle {
+  right: 0;
+  top: 20%;
+}
+.payo-graphical-wrapper.lines-circle-lp-banner {
+  bottom: 5%;
+}
+.landing-page-enabler {
+  padding: 100px 0;
+  position: relative;
+}
+.landing-page-enabler h2 {
+  font-size: 25px;
+  line-height: 36px;
+  text-align: center;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  padding-bottom: 40px;
+}
+.payo-enabler-box {
+  background-color: #e7f1fb;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px 3px #e7f1fbbf;
+}
+.payo-enabler-box img {
+  max-width: 70px;
+}
+.payo-enabler-box h3 {
+  font-size: 25px;
+  font-family: metropolis, sans-serif;
+  padding: 15px 0;
+  margin: 0;
+  line-height: 36px;
+  color: var(--payo-primary);
+}
+.payo-enabler-box p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #666;
+  font-family: ws-regular, sans-serif;
+  margin: 0;
+}
+.payo-graphical-wrapper.enabler-circle {
+  right: 0;
+}
+.landing-page-merchants {
+  padding: 100px 0;
+  position: relative;
+}
+.landing-page-merchants-content {
+  font-size: 45px;
+  line-height: 60px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  margin: 0;
+}
+.payo-graphical-wrapper.merchants-circle {
+  top: 0;
+}
+.payo-graphical-wrapper.merchants-circle {
+  transform: rotate(180deg);
+}
+.landing-page-full-service-list ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 20px;
+}
+.landing-page-full-service-list ul li img {
+  max-width: 30px;
+  margin-right: 15px;
+}
+.landing-page-full-service-list ul li {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  font-family: metropolis, sans-serif;
+}
+.landing-page-full-service-list a {
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  color: var(--payo-primary);
+  background-color: var(--payo-secondary);
+  padding: 15px 50px;
+  width: 100%;
+  border-radius: 35px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.landing-page-full-service-list a:hover,
+.landing-page-full-service-list a:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+  outline: 0;
+}
+.landing-page-merchants-wrapper iframe {
+  position: absolute;
+  right: 16%;
+  z-index: 3;
+  top: 6%;
+}
+.payo-post-wrapper {
+  padding: 100px 0;
+}
+.payo-post-entry-header .post-thumbnail img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.payo-post-entry-body .entry-title {
+  font-family: metropolis, sans-serif;
+  color: #000;
+  font-size: 42px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0 0 10px;
+}
+.payo-post-entry-body {
+  padding: 0 100px 0 65px;
+  position: relative;
+}
+.payo-post-entry-body-top {
+  padding: 30px 0 65px;
+}
+.payo-post-entry-body-top .entry-meta {
+  display: flex;
+  align-items: center;
+  font-family: ws-regular;
+  font-size: 15px;
+  margin: 0;
+}
+.payo-post-entry-body-top .entry-meta p {
+  margin: 0;
+}
+.payo-post-entry-body-top .entry-meta span {
+  padding: 0 10px;
+}
+.payo-post-entry-body-bottom p,
+.payo-post-entry-body-bottom span {
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 15px;
+  font-family: ws-regular, sans-serif;
+  color: #000;
+}
+.payo-post-entry-body-bottom h2 {
+  font-size: 36px;
+  font-family: metropolis, sans-serif;
+  color: var(--payo-primary);
+  line-height: 52px;
+  margin: 0;
+  padding: 50px 0 20px;
+}
+.payo-post-entry-body-bottom h3 {
+  font-size: 28px;
+  font-family: metropolis, sans-serif;
+  color: var(--payo-primary);
+  line-height: 42px;
+  margin: 0;
+  padding: 25px 0 15px;
+}
+.payo-post-entry-body-bottom h4 {
+  font-size: 22px;
+  font-family: metropolis, sans-serif;
+  color: var(--payo-primary);
+  line-height: 36px;
+  margin: 0;
+  padding: 20px 0 10px;
+}
+.payo-post-entry-body-bottom img {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+}
+.payo-post-entry-body-bottom ul,
+.payo-post-entry-body-bottom ol {
+  padding: 0;
+  line-height: 28px;
+  font-family: ws-regular, sans-serif;
+  color: #000;
+  font-size: 15px;
+}
+.payo-post-entry-body-bottom a {
+  color: var(--payo-primary);
+  text-decoration: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-post-entry-body-bottom a:hover,
+.payo-post-entry-body-bottom a:focus {
+  color: #000;
+}
+.payo-post-entry-sharing {
+  position: absolute;
+  right: 0;
+}
+.payo-post-entry-sharing p {
+  font-family: ws-semibold, sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+.payo-post-entry-sharing ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.payo-post-entry-sharing ul li a {
+  display: inline-block;
+  padding: 10px 0;
+}
+.payo-post-entry-sharing ul li a img {
+  max-width: 36px;
+  opacity: 0.6;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-post-entry-sharing ul li a:hover img,
+.payo-post-entry-sharing ul li a:focus img {
+  opacity: 1;
+}
+.payo-single-job-application {
+  border: 1px solid var(--payo-secondary);
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  font-family: ws-semibold, sans-serif;
+  font-size: 15px;
+  padding: 15px 50px;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-single-job-application:hover,
+.payo-single-job-application:focus {
+  border: 1px solid var(--payo-primary);
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary) !important;
+}
+.payo-thank-you-main-wrapper {
+  padding: 100px 0;
+}
+.payo-not-found-main-wrapper {
+  padding: 160px 0 125px;
+}
+.page-id-244 #page,
+.error404 #page {
+  background-color: #0a3561;
+}
+.payo-thank-you-main-wrapper h1 {
+  font-size: 45px;
+  line-height: 58px;
+  margin: 0;
+  color: #fff;
+  font-family: var(--payo-metropolis);
+}
+.payo-not-found-main-wrapper {
+  background-image: url(../img/background/404-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+}
+.payo-not-found-main-wrapper h1 {
+  font-size: 55px;
+  line-height: 68px;
+  margin: 0;
+  color: #000;
+  font-family: var(--payo-metropolis);
+}
+.payo-thank-you-main-wrapper p,
+.payo-not-found-main-wrapper p {
+  margin: 0;
+  font-size: 20px;
+  font-family: ws-regular, sans-serif;
+  line-height: 36px;
+  padding: 15px 0;
+  color: #fff;
+}
+.payo-not-found-main-wrapper p {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 35px 0;
+}
+.payo-thank-you-main-wrapper a,
+.payo-back-homepage.not-found {
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  font-family: ws-semibold;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.payo-not-found-main-wrapper a {
+  text-align: center;
+}
+.payo-not-found-main-wrapper p > a {
+  color: var(--payo-secondary);
+  font-weight: 600;
+}
+.payo-not-found-main-wrapper p > a:hover,
+.payo-not-found-main-wrapper p > a:focus {
+  color: #fff;
+}
+.payo-thank-you-main-wrapper a:hover,
+.payo-thank-you-main-wrapper a:focus,
+.payo-back-homepage.not-found:hover,
+.payo-back-homepage.not-found:focus {
+  color: var(--payo-secondary);
+  background-color: var(--payo-primary);
+}
+.payo-tracking-form-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.payo-tracking-form-wrapper h1 {
+  margin: 0;
+  padding-bottom: 25px;
+  color: #000;
+  font-family: metropolis, sans-serif;
+  font-size: 35px;
+  line-height: 50px;
+}
+.payo-tracking-form-wrapper p {
+  margin: 0;
+  padding: 25px 0 20px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  font-family: ws-regular, sans-serif;
+}
+.payo-tracking-form-wrapper a {
+  background-color: #fff;
+  font-family: ws-semibold;
+  color: var(--payo-primary);
+  font-size: 15px;
+  padding: 0;
+  border-radius: 0;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-tracking-form-wrapper a:hover,
+.payo-tracking-form-wrapper a:focus {
+  color: #000;
+  text-decoration: none;
+  outline: 0;
+}
+.payo-inquire-content-wrapper.payo-tracking-inquire-content-wrapper {
+  padding-top: 50px;
+}
+.payo-tracking-inquire-content-wrapper embed {
+  max-width: 500px;
+  min-height: 420px;
+}
+.payo-plugin-manual-template-wrapper {
+  padding: 100px 0;
+}
+.payo-plugin-manual-template-wrapper h1 {
+  font-size: 35px;
+  font-family: metropolis, sans-serif;
+  color: #000;
+  line-height: 50px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+.payo-manual-download-btn {
+  font-size: 15px;
+  font-family: ws-semibold, sans-serif;
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
+  padding: 15px 40px;
+  border-radius: 35px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-manual-download-btn:hover,
+.payo-manual-download-btn:focus {
+  background-color: var(--payo-primary);
+  color: var(--payo-secondary);
+  text-decoration: none;
+  outline: 0;
+}
+.payo-plugin-manual-template-wrapper img {
+  margin: 0 auto;
+  display: block;
+  max-width: 500px;
+  width: 100%;
+}
+#payoExitPopup .modal-dialog {
+  max-width: 600px;
+}
+#payoExitPopup .modal-content {
+  border: 0;
+}
+#payoExitPopup .modal-body {
+  background-image: url(../img/background/shipments-charge-popup.png);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.payoPopupActionButtons {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.payoPopupActionButtons a {
+  max-width: 350px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payoPopupActionButtons a:hover,
+.payoPopupActionButtons a:focus {
+  opacity: 0.8;
+}
+.payoPopupActionButtons button {
+  font-size: 15px;
+  font-family: ws-regular, sans-serif;
+  color: var(--payo-primary);
+  background: 0 0;
+  border: 0;
+}
+.payo-exit-image-filler {
+  opacity: 0;
+  max-height: 350px;
+}
+.payo-calculator-grid-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+}
+.payo-calc-grid {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+.payo-calc-grid.two-grid {
+  width: 50%;
+  padding: 15px;
+}
+.payo-calc-grid.tri-grid {
+  width: 33%;
+  padding: 10px;
+}
+.payo-calc-grid.grid-custom {
+  opacity: 0;
+  display: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+.grid-custom.tri-grid {
+  opacity: 1;
+  display: flex;
+}
+.payo-calculator-grid-wrapper .payo-calc-inner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 25px;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+}
+.payo-calculator-grid-wrapper .payo-calc-inner-wrap:hover {
+  box-shadow: 0 3px 5px 1px #0000007d;
+}
+.payo-calc-grid.grid-custom > .payo-calc-inner-wrap {
+  background-color: #e7f1fb;
+}
+.payo-calc-inner-wrap.wrap-custom > div {
+  width: 100%;
+}
+.payo-calc-grid label {
+  margin: 0;
+  padding-bottom: 15px;
+  color: var(--payo-primary);
+  font-family: metropolis, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+}
+#payoShipOrigin {
+  margin-bottom: 30px;
+}
+.payo-calc-grid select,
+.select2 {
+  width: 100% !important;
+  font-family: ws-regular, sans-serif;
+  background-color: #e7f1fb;
+  padding: 15px;
+  font-size: 15px;
+  line-height: 22px;
+  border-radius: 5px;
+  border: 0;
+  text-align: left;
+}
+.tri-grid .select2 {
+  max-width: 250px !important;
+}
+.payo-calc-grid input[type="number"] {
+  font-family: ws-regular;
+  font-size: 15px;
+  padding-right: 40px;
+  max-width: 100px;
+  border-radius: 10px;
+  text-align: right;
+}
+#payoPouchCVWeight {
+  background-color: var(--payo-secondary);
+}
+.select2 > .selection,
+.select2 > .selection > .select2-selection {
+  font-family: ws-regular, sans-serif;
+  background-color: #e7f1fb;
+  font-size: 15px;
+  line-height: 22px;
+  border: 0;
+}
+.select2-results__option {
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 25%;
+  right: 10px;
+}
+.wrap-custom > div label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--payo-regular);
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.payo-calculator-results {
+  padding-top: 40px;
+}
+.payo-calculator-results h3 {
+  font-size: 24px;
+  font-family: var(--payo-metropolis);
+  margin-bottom: 10px;
+}
+#payoCalculationResult {
+  max-width: 400px;
+  margin: 20px auto 0;
+  background-color: var(--payo-secondary);
+  border-radius: 10px;
+  line-height: 15px;
+}
+p.payo-calculator-additional-details {
+  padding: 10px 0 0;
+}
+p.payo-calculator-vat-details {
+  padding-top: 0;
+  font-size: 12px;
+}
+.payo-overview-ph-ecommerce {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+}
+.ecomm-banner-graphic.payo-logistics-lp {
+  top: 25%;
+}
+@media screen and (min-width: 1499px) {
+  .payo-homepage-banner {
+    height: 120vh;
+  }
+  .payo-homepage-banner-content p {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 15px 0 20px;
+  }
+  .payo-homepage-banner-content h1 {
+    font-size: 38px;
+    line-height: 52px;
+  }
+  .payo-homepage-partners {
+    padding: 80px 0 65px;
+  }
+  .payo-easy {
+    padding: 75px 0;
+  }
+  .payo-why-partner {
+    padding: 60px 0 0;
+  }
+}
+@media screen and (max-width: 1335px) {
+  .payo-graphical-wrapper.ecomm-importance-graphic {
+    top: 20%;
+  }
+  .payo-graphical-wrapper.ecomm-importance-graphic img {
+    max-width: 600px;
+  }
+  .payo-graphical-wrapper.ecomm-banner-graphic {
+    top: 20%;
+  }
+  .payo-graphical-wrapper.ecomm-banner-graphic img {
+    max-width: 550px;
+  }
+}
+@media screen and (max-width: 1251px) {
+  .payo-graphical-wrapper.services-side-left-dots {
+    bottom: 0;
+    left: 5%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .payo-header-newsletter-wrapper-form form {
+    max-width: 235px;
+  }
+  .payo-header-contact-wrapper p {
+    font-size: 10px;
+  }
+  .payo-header-contact-wrapper a {
+    padding: 0 10px;
+  }
+  .payo-header-contact-wrapper {
+    justify-content: space-between;
+  }
+  .payo-logo-wrapper img {
+    max-width: 120px;
+  }
+  #site-navigation {
+    padding-left: 0;
+  }
+  #primary-menu .menu-item a {
+    padding: 10px;
+  }
+  #primary-menu .menu-item {
+    font-size: 14px;
+  }
+  .payo-custom-navlink.payo-member-signup a,
+  .payo-custom-navlink.payo-portal a {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+  .payo-homepage-banner-content h1 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .payo-homepage-banner-content p {
+    font-size: 18px;
+    margin: 15px 0 25px;
+    line-height: 32px;
+  }
+  .payo-homepage-banner-form {
+    flex-direction: column;
+  }
+  .payo-homepage-banner-form form {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .payo-trusted-partners-list h2,
+  .payo-easy-content h2,
+  .payo-why-partner-head h2,
+  .payo-works-step-list h2,
+  .payo-made-you-head h2,
+  .payo-looks-head h2,
+  .payo-success-form-wrapper h2,
+  .payo-testimonials h2 {
+    font-size: 25px;
+    line-height: 36px;
+  }
+  .payo-works img {
+    padding-right: 40px;
+  }
+  .payo-works-box h3 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .payo-looks-content-wrapper {
+    padding-right: 20px;
+  }
+  .payo-graphical-wrapper.lined-circle-success {
+    left: 0;
+    bottom: 5%;
+  }
+  .payo-graphical-wrapper.linear-circle-made-you {
+    top: 5%;
+  }
+  #whyPartnerWithPayo .owl-nav img {
+    max-width: 40px;
+  }
+  #whyPartnerWithPayo {
+    padding-left: 115px;
+  }
+  .payo-graphical-wrapper.inquire-graphic img {
+    max-width: 450px;
+  }
+  .payo-graphical-wrapper.ecomm-banner-graphic {
+    top: 30%;
+  }
+  .payo-graphical-wrapper.ecomm-banner-graphic img {
+    max-width: 450px;
+  }
+  .payo-ecom-main-banner {
+    padding: 85px 0 50px;
+  }
+  .payo-ecomm-banner-content h1 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .payo-other-article-box.article-background {
+    margin-right: 20px;
+  }
+  .article-background a {
+    max-width: 50%;
+  }
+  .payo-services-body-head a {
+    font-size: 12px;
+  }
+  .payo-services-banner.last-mile-management {
+    height: 1000px;
+  }
+  .payo-graphical-wrapper.about-graphic-banner img {
+    max-width: 550px;
+  }
+  .payo-graphical-wrapper.about-graphic-banner {
+    bottom: 15%;
+  }
+  .landing-page-merchants-wrapper iframe {
+    max-width: 355px;
+    max-height: 240px;
+  }
+  a.payo-header-parcel-tracker {
+    font-size: 13px;
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 1051px) {
+  #whyPartnerWithPayo {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .payo-graphical-wrapper.career-body-half-dotted {
+    max-width: 35px;
+  }
+  .payo-graphical-wrapper.ecomm-importance-graphic {
+    top: 30%;
+  }
+  .payo-graphical-wrapper.ecomm-importance-graphic img {
+    max-width: 500px;
+  }
+  .payo-graphical-wrapper {
+    z-index: 0;
+    opacity: 0.3;
+  }
+}
+@media screen and (max-width: 992px) {
+  .payo-header-navbar {
+    position: relative;
+  }
+  .payo-made-you-persona-box {
+    min-height: 400px;
+  }
+  .payo-site-footer {
+    background-size: cover;
+    padding: 50px 0;
+  }
+  .footer-company {
+    padding: 85px 0 20px;
+  }
+  #site-navigation {
+    text-align: right;
+  }
+  #site-navigation button {
+    font-size: 20px;
+    color: var(--payo-primary);
+    background-color: var(--payo-secondary);
+    padding: 10px 15px;
+  }
+  .payo-custom-navlink {
+    margin-bottom: 10px;
+  }
+  .payo-header-navbar img {
+    max-width: 125px;
+  }
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    text-align: left;
+    position: absolute;
+    z-index: 15;
+    background-color: var(--payo-primary);
+    left: -100%;
+    right: 0;
+    margin-top: 25px;
+    padding: 15px;
+    box-shadow: 0 3px 4px 1px #0000006b;
+  }
+  .payo-custom-navlink {
+    width: 45%;
+  }
+  .payo-custom-navlink.payo-member-signup {
+    float: left;
+  }
+  .payo-custom-navlink.payo-portal {
+    float: right;
+  }
+  .payo-custom-navlink.payo-member-signup a,
+  .payo-custom-navlink.payo-portal a {
+    text-align: center;
+  }
+  .payo-logo-wrapper img {
+    max-width: 100px;
+  }
+  #primary-menu .menu-item a {
+    padding: 8px 3px;
+  }
+  .payo-header-newsletter-wrapper-form {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .payo-header-newsletter-wrapper-form form {
+    max-width: unset;
+  }
+  .payo-header-contact-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .payo-header-contact-wrapper p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .payo-header-contact-wrapper a {
+    margin-bottom: 5px;
+  }
+  .payo-homepage-banner {
+    margin-top: -28vh;
+  }
+  .payo-homepage-banner-content h1 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .payo-homepage-banner-content p {
+    font-size: 15px;
+    margin: 10px 0;
+    line-height: 25px;
+  }
+  .payo-homepage-banner-form form {
+    display: flex;
+    width: 100%;
+  }
+  .payo-homepage-banner-form input[type="email"] {
+    width: 60%;
+  }
+  .payo-homepage-banner-form button,
+  .payo-homepage-banner-form input[type="email"] {
+    font-size: 12px;
+  }
+  .payo-homepage-banner-wrapper {
+    padding-bottom: 0;
+  }
+  .payo-homepage-banner-form {
+    align-items: flex-start;
+  }
+  #payoPartnersSlider .item img {
+    max-width: 150px;
+  }
+  .payo-trusted-partners-list h2,
+  .payo-easy-content h2,
+  .payo-why-partner-head h2,
+  .payo-works-step-list h2,
+  .payo-made-you-head h2,
+  .payo-looks-head h2,
+  .payo-success-form-wrapper h2,
+  .payo-testimonials h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .payo-easy-dotted-graphic-small,
+  .payo-easy-dotted-graphic-large {
+    max-width: 100px;
+  }
+  .payo-why-partner-head p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  #whyPartnerWithPayo {
+    padding-left: 100px;
+  }
+  .payo-works .row {
+    align-items: center;
+  }
+  .payo-works-box a {
+    margin-top: 15px;
+    padding: 15px 25px;
+  }
+  .payo-made-you-head h2 {
+    width: unset;
+  }
+  .payo-looks-content-wrapper a {
+    padding: 15px 20px;
+    text-align: center;
+  }
+  .payo-graphical-wrapper.lined-circle-success {
+    left: 10%;
+    bottom: 20%;
+  }
+  .payo-graphical-wrapper.lined-circle-success img {
+    max-width: 300px;
+  }
+  .payo-success-form-wrapper a {
+    margin: 0 20px;
+  }
+  .footer-company {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 100px 0 20px;
+  }
+  .footer-contact-details {
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .site-links {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  .payo-why-partner-slide {
+    width: 325px;
+  }
+  .payo-made-you-persona-box {
+    flex-direction: column;
+  }
+  .payo-looks-image-slide-wrapper {
+    padding-right: 25px;
+  }
+  .payo-looks-graphic-wrapper {
+    align-items: center;
+  }
+  .payo-graphical-wrapper.career-banner-zigzag-left {
+    left: 10%;
+    top: 10%;
+  }
+  .payo-graphical-wrapper.career-banner-zigzag-right {
+    right: 10%;
+    bottom: 10%;
+  }
+  .payo-inquire-form-wrapper {
+    padding: 60px;
+  }
+  .payo-inquire-form-wrapper h1 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .payo-inquire-content-wrapper h2 {
+    font-size: 25px;
+    line-height: 36px;
+  }
+  .payo-inquire-content-wrapper p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .payo-inquire-content-wrapper a {
+    font-size: 18px;
+  }
+  .payo-graphical-wrapper.inquire-graphic {
+    bottom: -15%;
+  }
+  .payo-ecom-main-banner .row,
+  .payo-ecom-solutions .row {
+    flex-direction: column-reverse;
+  }
+  .payo-ecom-main-banner img,
+  .payo-ecom-importance img {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+  .payo-ecom-solutions .payo-ecom-solutions-graphic {
+    margin-bottom: 35px;
+  }
+  .payo-ecomm-banner-content {
+    padding: 0;
+  }
+  .payo-graphical-wrapper.contact-form-arrows {
+    bottom: 10%;
+  }
+  .payo-contact-banner-list p {
+    position: relative;
+    z-index: 1;
+  }
+  .payo-contact-main-banner {
+    padding: 80px 0;
+  }
+  .payo-graphical-wrapper.contact-form-graphic {
+    top: -15%;
+    right: 10%;
+  }
+  .payo-graphical-wrapper.contact-form-graphic img {
+    max-width: 100px;
+  }
+  .payo-contact-banner-content h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .payo-contact-banner-list p {
+    padding: 15px 10px;
+    font-size: 18px;
+  }
+  .payo-contact-form-body h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .payo-contact-form-body form > label {
+    font-size: 15px;
+    padding-bottom: 10px;
+    line-height: 22px;
+  }
+  .payo-contact-selectors > button {
+    padding: 15px 10px;
+  }
+  .payo-contact-banner-form {
+    padding: 70px 35px 50px;
+  }
+  .payo-contact-sets-apart-box h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .payo-contact-sets-apart-box {
+    padding: 15px 0;
+    max-width: unset;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .payo-contact-sets-apart-body-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .payo-contact-sets-apart {
+    position: relative;
+    padding: 50px 0 100px;
+  }
+  .payo-graphical-wrapper.apart-side-dotted-square img {
+    max-width: 75px;
+  }
+  .payo-graphical-wrapper.apart-side-dotted-square {
+    top: 5%;
+  }
+  .payo-contact-sets-apart-body {
+    padding: 50px 0 35px;
+  }
+  .payo-graphical-wrapper.contact-banner-circle {
+    top: 0;
+  }
+  .payo-featured-post-data {
+    padding-left: 20px;
+  }
+  .payo-other-articles-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .payo-other-articles-heading form {
+    margin-top: 15px;
+    padding: 10px 40px;
+  }
+  .payo-other-articles-heading form input[type="text"],
+  .payo-other-articles-heading form {
+    max-width: unset;
+  }
+  .payo-first-other-articles,
+  .payo-second-other-articles,
+  .payo-third-other-articles {
+    flex-wrap: wrap;
+  }
+  .payo-other-article-box.article-background,
+  .payo-other-article-box.second-article-background {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .payo-first-other-articles .payo-other-article-box.article-normal,
+  .payo-other-article-box.second-article-image {
+    width: 47%;
+  }
+  .payo-other-article-box.second-article-image {
+    margin: 0 10px;
+  }
+  .payo-services-body-head-link {
+    text-align: center;
+  }
+  .payo-services-body-head a {
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 15px 20px;
+  }
+  .payo-services-content-box h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .payo-services-banner-content h1 {
+    font-size: 36px;
+    line-height: 48px;
+    padding-bottom: 10px;
+  }
+  .payo-services-banner.last-mile-management,
+  .payo-services-banner.warehousing-service {
+    height: 1200px;
+  }
+  .payo-about-banner {
+    height: 900px;
+  }
+  .payo-graphical-wrapper.about-graphic-banner img {
+    max-width: 500px;
+  }
+  .payo-graphical-wrapper.founder-photo {
+    max-width: 400px;
+  }
+  .payo-graphical-wrapper.history-photo-line {
+    max-width: 150px;
+  }
+  .payo-about-mission-vision-head h2 {
+    font-size: 65px;
+    line-height: 80px;
+  }
+  .payo-landing-page-banner-form {
+    padding-left: 20px;
+  }
+  .payo-landing-page-banner-content h1 {
+    font-size: 36px;
+    padding-top: 0;
+    line-height: 52px;
+  }
+  .payo-landing-page-form-actions {
+    flex-direction: column-reverse;
+  }
+  .payo-landing-page-form-actions a {
+    margin-top: 15px;
+  }
+  .landing-page-enabler h2 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .landing-page-full-service-list ul li {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .payo-post-entry-body {
+    padding: 0 100px 0 30px;
+  }
+  .payo-post-entry-body-top {
+    padding: 0 0 40px;
+  }
+  .payo-post-entry-body-bottom h2 {
+    padding: 25px 0 20px;
+  }
+  .payo-privacy-sticky {
+    padding: 15px 30px;
+  }
+  .payo-privacy-sticky img {
+    width: 100px;
+  }
+  .payo-privacy-sticky p {
+    font-size: 18px;
+  }
+  .landing-page-merchants-wrapper iframe {
+    max-width: 260px;
+    max-height: 180px;
+  }
+  a.payo-header-parcel-tracker {
+    padding: 10px 15px;
+  }
+  .payo-plugin-manual-template-wrapper {
+    padding: 60px 0;
+  }
+  .payo-plugin-manual-template-wrapper h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .payo-calculator-grid-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .payo-calc-grid.tri-grid,
+  .payo-calc-grid.two-grid {
+    width: 100%;
+  }
+  p.payo-calculator-additional-details {
+    font-size: 18px;
+  }
+  p.payo-calculator-vat-details {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 993px) and (min-width: 992px) {
+  .payo-custom-navlink.payo-member-signup a,
+  .payo-custom-navlink.payo-portal a {
+    display: inline-block;
+  }
+  .payo-custom-navlink {
+    width: unset;
+  }
+  #navbarSupportedContent .menu-menu-1-container {
+    width: 100%;
+  }
+  .payo-homepage-banner-form input[type="email"] {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 821px) {
+  .payo-graphical-wrapper.about-graphic-banner {
+    bottom: 40%;
+  }
+  .payo-graphical-wrapper.about-graphic-banner img {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .payo-homepage-banner {
+    height: unset;
+  }
+  .payo-site-footer {
+    padding: 50px 0 15px;
+  }
+  .payo-made-you-persona-box {
+    min-height: unset;
+  }
+  .payo-homepage-banner-wrapper {
+    padding: 200px 0 250px;
+  }
+  .payo-homepage-banner-form input[type="email"] {
+    width: 75%;
+  }
+  .payo-homepage-banner-image img {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 35px;
+  }
+  .payo-header-colored .row {
+    flex-direction: column-reverse;
+  }
+  .payo-header-contact-wrapper {
+    flex-direction: row;
+    margin-bottom: 15px;
+  }
+  .payo-header-contact-wrapper a {
+    font-size: 12px;
+  }
+  .payo-easy-content h2 {
+    margin-top: 25px;
+  }
+  #whyPartnerWithPayo .owl-nav img {
+    max-width: 25px;
+  }
+  #whyPartnerWithPayo .owl-nav {
+    top: -18%;
+  }
+  .payo-homepage-banner-content h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .payo-trusted-partners-list h2,
+  .payo-easy-content h2,
+  .payo-why-partner-head h2,
+  .payo-works-step-list h2,
+  .payo-made-you-head h2,
+  .payo-looks-head h2,
+  .payo-success-form-wrapper h2,
+  .payo-testimonials h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .payo-homepage-partners {
+    padding: 25px 0 0;
+  }
+  .payo-easy {
+    padding: 100px 0 70px;
+  }
+  .payo-easy-content {
+    padding-left: 0;
+  }
+  .payo-works {
+    padding: 200px 0;
+    height: unset;
+    background-size: cover;
+  }
+  .payo-works-step-list {
+    margin-top: 30px;
+  }
+  .payo-made-you-persona-box.persona-box-first {
+    margin-right: 0;
+  }
+  .payo-made-you-persona-box.persona-box-second {
+    margin-left: 0;
+  }
+  .payo-looks-content-wrapper h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .payo-looks-graphic-wrapper {
+    margin-bottom: 50px;
+  }
+  .payo-looks-body .row {
+    flex-direction: column-reverse;
+  }
+  .payo-looks-graphic-wrapper {
+    align-items: center;
+  }
+  .payo-looks-graphic-wrapper > div {
+    padding-right: 20px;
+  }
+  .payo-looks-graphics-number:before {
+    left: 30%;
+  }
+  .payo-graphical-wrapper.lined-circle-success {
+    left: 45%;
+    bottom: 40%;
+  }
+  .payo-testimonials {
+    padding: 70px 0;
+  }
+  .payo-testimonials-body-wrapper {
+    padding: 45px 0;
+  }
+  .payo-testimonial-box {
+    margin-bottom: 25px;
+  }
+  .payo-footer-contact-details {
+    padding-top: 25px;
+  }
+  .site-links {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0;
+  }
+  .footer-contact-details {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .payo-works img {
+    padding-right: 0;
+  }
+  .payo-careers-banner-content {
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+  .payo-header-navbar.payo-header-on-image {
+    background-size: cover;
+    padding: 25px 0 70px;
+  }
+  .payo-faqs-question-panel {
+    padding: 0;
+    margin-top: 30px;
+  }
+  .payo-faqs-body {
+    padding: 70px 0;
+  }
+  .payo-faqs-content-header h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .question-header button {
+    font-size: 20px;
+  }
+  .payo-inquire-template-wrapper {
+    padding: 85px 0 250px;
+  }
+  .payo-graphical-wrapper.inquire-graphic img {
+    max-width: 300px;
+  }
+  .payo-graphical-wrapper.inquire-graphic {
+    bottom: -6%;
+  }
+  .payo-ecom-importance {
+    padding: 40px 0;
+  }
+  .payo-contact-banner-form-wrapper {
+    margin-left: 0;
+    margin-top: 100px;
+  }
+  .payo-first-other-articles .payo-other-article-box.article-normal,
+  .payo-other-article-box.second-article-image,
+  .payo-third-other-articles .payo-other-article-box {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .payo-graphical-wrapper.featured-arrows {
+    left: 0;
+    bottom: 20%;
+  }
+  .payo-featured-wrapper {
+    padding-bottom: 250px;
+  }
+  .payo-featured-post-image {
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  .payo-services-banner {
+    height: 1050px;
+  }
+  .payo-services-banner-wrapper .row {
+    flex-direction: column-reverse;
+  }
+  .payo-services-banner-wrapper {
+    padding-top: 85px;
+  }
+  .payo-services-banner-image img {
+    max-width: 450px;
+    margin: 0 auto 25px;
+    display: block;
+  }
+  .payo-graphical-wrapper.services-header {
+    bottom: 0;
+  }
+  .payo-services-body {
+    padding: 45px 0 125px;
+  }
+  .payo-services-content-box {
+    margin-bottom: 65px;
+    padding: 0;
+  }
+  .payo-services-banner.last-mile-management,
+  .payo-about-banner {
+    height: 1250px;
+  }
+  .payo-services-banner.cash-on-delivery-philippines {
+    height: 1200px;
+  }
+  .payo-trusted-partners-list.about-us-inside {
+    padding: 0 0 80px;
+  }
+  .payo-about-founder {
+    flex-direction: column;
+  }
+  .payo-graphical-wrapper.founder-photo {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .payo-about-founder {
+    height: 1200px;
+    margin-top: 0;
+  }
+  .payo-about-mission-vision-content {
+    margin-left: 0;
+    padding-top: 25px;
+  }
+  .payo-landing-page-banner-form {
+    z-index: 1;
+    position: relative;
+    padding-left: 0;
+    padding-top: 35px;
+  }
+  .payo-landing-page-banner {
+    height: 1300px;
+  }
+  .landing-page-enabler {
+    padding: 40px 0;
+  }
+  .payo-enabler-box {
+    margin-bottom: 15px;
+  }
+  .landing-page-merchants-content {
+    margin-bottom: 70px;
+  }
+  .payo-post-entry-sharing ul li a img {
+    max-width: 28px;
+  }
+  .payo-post-entry-body .entry-title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .payo-post-entry-body-bottom h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .payo-post-entry-body-bottom h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .payo-post-entry-body-bottom ul,
+  .payo-post-entry-body-bottom ol {
+    margin-left: 15px;
+  }
+  .landing-page-merchants-wrapper iframe {
+    max-width: 340px;
+    max-height: 230px;
+  }
+  .payo-thank-you-main-wrapper img {
+    margin-top: 50px;
+  }
+  .payo-thank-you-main-wrapper,
+  .payo-not-found-main-wrapper {
+    padding: 40px 0;
+  }
+  .payo-inquire-content-wrapper.payo-tracking-inquire-content-wrapper {
+    padding-left: 0;
+  }
+  .payo-header-newsletter-wrapper-form h4 {
+    text-align: center;
+  }
+  .payo-plugin-manual-template-wrapper .row {
+    flex-direction: column-reverse;
+  }
+  .payo-plugin-manual-template-wrapper img {
+    max-width: 480px;
+    margin-bottom: 25px;
+  }
+  #payoExitPopup .modal-dialog {
+    max-width: 500px;
+  }
+  .payo-exit-image-filler {
+    max-height: 300px;
+  }
+}
+@media screen and (max-width: 701px) {
+  .payo-why-partner-slide {
+    width: 300px;
+  }
+  #whyPartnerWithPayo {
+    padding-left: 50px;
+  }
+  .payo-ecom-main-banner img,
+  .payo-ecom-importance img {
+    max-width: 400px;
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .payo-header-navbar {
+    padding: 50px 0 25px;
+    margin-top: -35px;
+  }
+  .payo-homepage-banner-form input[type="email"] {
+    width: 70%;
+  }
+  .payo-header-contact-wrapper {
+    display: none;
+  }
+  .payo-homepage-banner-wrapper {
+    padding: 200px 0 300px;
+  }
+  .payo-success-image {
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+  .payo-graphical-wrapper.dot-square-success {
+    left: 10%;
+    top: 15%;
+  }
+  .payo-graphical-wrapper.dot-square-success img {
+    max-width: 170px;
+  }
+  .payo-faqs-body {
+    padding: 40px 0;
+  }
+  .payo-inquire-form-wrapper {
+    padding: 30px 20px;
+  }
+  .payo-featured-post-data {
+    padding-left: 0;
+  }
+  .payo-services-banner-wrapper {
+    padding-top: 0;
+  }
+  .payo-services-banner-image img {
+    max-width: 350px;
+  }
+  .payo-graphical-wrapper.services-header {
+    padding: 0 50px;
+  }
+  .payo-services-banner.last-mile-management {
+    height: 1250px;
+  }
+  .last-mile-management .payo-services-banner-wrapper {
+    padding-top: 50px;
+  }
+  .payo-history-panel-selector {
+    font-size: 22px;
+  }
+  .payo-history-list-selector {
+    align-items: center;
+  }
+  .payo-history-list-selector::before {
+    left: 50%;
+  }
+  .payo-about-mission-vision {
+    margin: 50px 0;
+    height: 1000px;
+  }
+  .payo-about-mission-vision-head h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .payo-landing-page-banner {
+    height: 1275px;
+  }
+  .payo-post-entry-body {
+    padding: 0 75px 0 15px;
+  }
+  .landing-page-merchants-wrapper .payo-easy-main-graphic {
+    display: none;
+  }
+  .landing-page-merchants-wrapper iframe {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  .landing-page-merchants-wrapper .payo-easy-graphic {
+    text-align: center;
+  }
+  #payoExitPopup .modal-dialog {
+    max-width: 300px;
+    margin: auto;
+  }
+  #payoExitPopup .modal-body {
+    background-image: url(../img/background/shipments-charge-popup-mob.png);
+    min-height: 400px;
+  }
+  .payo-exit-image-filler {
+    height: 310px;
+  }
+  .payoPopupActionButtons {
+    margin-bottom: 0;
+  }
+  .payoPopupActionButtons a {
+    max-width: 275px;
+  }
+}
+@media screen and (max-width: 601px) {
+  .payo-why-partner-slide {
+    width: unset;
+  }
+  #whyPartnerWithPayo {
+    padding-left: 15px;
+  }
+  .payo-plugin-manual-template-wrapper img {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-row {
+    padding: 0 20px;
+  }
+  .site-links {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+  .footer-contact-details {
+    padding: 0;
+  }
+  .footer-company {
+    padding: 25px 0 20px;
+  }
+  #payoPartnersSlider .item img {
+    max-width: 100px;
+  }
+  .payo-looks-graphic-list {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .payo-header-navbar.payo-header-on-image {
+    margin-top: 0;
+  }
+  .payo-ecom-automation-cta h2 {
+    line-height: 36px;
+    font-size: 24px;
+  }
+  .payo-ecom-automation-cta {
+    height: 450px;
+  }
+  .payo-history-image {
+    padding: 0;
+  }
+  .payo-post-wrapper {
+    padding: 30px 0;
+  }
+}
+@media screen and (max-width: 451px) {
+  .payo-graphical-wrapper.yellow-arrows-inverted-banner {
+    right: 5%;
+    top: 50%;
+  }
+  .payo-footer-company-details img {
+    max-width: 125px;
+  }
+  .payo-homepage-banner-wrapper {
+    padding: 215px 0 250px;
+  }
+  .payo-ecom-main-banner img,
+  .payo-ecom-importance img {
+    max-width: 350px;
+  }
+  .payo-landing-page-banner {
+    height: 1325px;
+  }
+}
+@media screen and (max-width: 431px) {
+  .payo-custom-navlink.payo-portal,
+  .payo-custom-navlink.payo-member-signup {
+    float: unset;
+  }
+  .payo-custom-navlink {
+    width: unset;
+  }
+  .payo-services-banner.last-mile-management {
+    height: 1350px;
+  }
+  .last-mile-management .payo-services-banner-wrapper {
+    padding-top: 85px;
+  }
+  .payo-services-banner.fulfillment-service,
+  .payo-services-banner.early-remittance {
+    height: 1200px;
+  }
+}
+@media screen and (max-width: 401px) {
+  .payo-graphical-wrapper.yellow-arrows-inverted-banner {
+    right: 10%;
+    top: 45%;
+  }
+  .payo-success-image {
+    width: 100%;
+  }
+  .payo-ecom-main-banner img,
+  .payo-ecom-importance img {
+    max-width: 285px;
+  }
+  .payo-ecom-automation-cta h2 {
+    line-height: 28px;
+    font-size: 18px;
+  }
+  .payo-services-banner-image img {
+    max-width: 300px;
+  }
+  .payo-services-banner.warehousing-service {
+    height: 1275px;
+  }
+  .payo-services-banner.cash-on-delivery-philippines {
+    height: 1325px;
+  }
+  .payo-about-history h2 {
+    padding-bottom: 0;
+  }
+  .payo-post-entry-body .entry-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .payo-post-entry-body-top {
+    padding: 0 0 25px;
+  }
+  .payo-post-entry-body-bottom h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .payo-post-entry-body-bottom h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .landing-page-merchants-wrapper iframe {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 351px) {
+  .payo-success-image {
+    max-width: 280px;
+  }
+  .payo-graphical-wrapper.lined-circle-success {
+    bottom: 55%;
+  }
+  .payo-graphical-wrapper.dot-square-success {
+    left: 0;
+    top: 10%;
+  }
+  #whyPartnerWithPayo .owl-nav {
+    top: -8%;
+  }
+  #whyPartnerWithPayo {
+    margin-top: 60px;
+  }
+  .payo-landing-page-banner {
+    height: 1400px;
+  }
+}
+.wpcf7-response-output {
+  color: #fff;
+  font-family: ws-regular, sans-serif;
+  font-size: 15px;
+}
