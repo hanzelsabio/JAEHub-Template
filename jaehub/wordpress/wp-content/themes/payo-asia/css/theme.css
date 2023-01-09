@@ -135,17 +135,17 @@ a:hover {
   display: inline-block;
 }
 .payo-logo-wrapper img {
-  max-width: 150px;
+  max-width: 180px;
 }
 .payo-header-navbar {
   padding: 15px 0 20px;
 }
 .payo-header-navbar.payo-header-on-image {
-  background-image: url(../img/background/header-navbar-blue.png);
+  background-color: var(--payo-primary);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 25px 0 100px;
+  padding: 25px 0 25px;
   margin-top: -5px;
 }
 .payo-header-navbar.payo-header-on-image.payo-additional-header {
@@ -655,8 +655,8 @@ a.payo-header-parcel-tracker:focus {
   font-family: ws-semibold, sans-serif;
   font-size: 15px;
   padding: 5px 13px;
-  background-color: #b3c1d0;
-  color: #5f7083;
+  background-color: #1d9dcc;
+  color: #000;
   display: inline-block;
   border-radius: 50%;
   transition: 0.5s;
@@ -1115,6 +1115,9 @@ a.payo-header-parcel-tracker:focus {
   z-index: 5;
   position: relative;
 }
+.payo-footer-company-details img{
+  max-width: 80%;
+}
 .payo-footer-company-details p {
   margin: 0;
   padding: 25px 0 20px;
@@ -1122,7 +1125,7 @@ a.payo-header-parcel-tracker:focus {
   line-height: 25px;
   color: #fff;
   font-family: ws-regular, sans-serif;
-  margin-right: 25px;
+  margin-right: 0px;
 }
 .payo-footer-site-links h4,
 .payo-footer-contact-details h4 {
@@ -1735,12 +1738,12 @@ a.payo-header-parcel-tracker:focus {
 .payo-inquire-form-wrapper input[type="number"],
 .payo-inquire-form-wrapper textarea {
   width: 100%;
-  background-color: #003b77;
+  background-color: #eee;
   border: 0;
   padding: 15px 25px;
   font-family: ws-regular, sans-serif;
   font-size: 15px;
-  color: #fff;
+  color: #000;
   margin-bottom: 15px;
 }
 .payo-inquire-form-wrapper select {
@@ -1763,7 +1766,7 @@ a.payo-header-parcel-tracker:focus {
 .payo-inquire-form-wrapper input[type="email"]::placeholder,
 .payo-inquire-form-wrapper input[type="number"]::placeholder,
 .payo-inquire-form-wrapper textarea::placeholder {
-  color: #3a6896;
+  color: #333;
   opacity: 1;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -1953,11 +1956,11 @@ a.payo-header-parcel-tracker:focus {
   position: relative;
 }
 .payo-ecom-automation-cta {
-  background-image: url(../img/background/ecom-auto-cta.png);
+  background-color: var(--payo-primary);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  height: 700px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2262,7 +2265,7 @@ a.payo-header-parcel-tracker:focus {
   display: block;
 }
 .payo-featured-blog {
-  background-image: url(../img/background/featured-blog-background.png);
+  background-color: var(--payo-primary);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2842,7 +2845,7 @@ a.payo-header-parcel-tracker:focus {
   position: relative;
 }
 .payo-about-history {
-  background-image: url(../img/background/about-history-background.png);
+  background-color: var(--payo-primary);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -2969,7 +2972,7 @@ a.payo-header-parcel-tracker:focus {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  background-color: #00274f;
+  background-color: var(--payo-primary);
 }
 .payo-history-panel-selector:hover,
 .payo-history-panel-selector:focus {
@@ -3059,7 +3062,7 @@ a.payo-header-parcel-tracker:focus {
   border-bottom: 1px solid #000;
 }
 .payo-landing-page-banner {
-  background-image: url(../img/graphics/landing-page-banner.png);
+  background-color: var(--payo-primary);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3564,6 +3567,7 @@ a.payo-header-parcel-tracker:focus {
 }
 .payo-tracking-form-wrapper a:hover,
 .payo-tracking-form-wrapper a:focus {
+  background-color: #fff;
   color: #000;
   text-decoration: none;
   outline: 0;
@@ -3854,7 +3858,7 @@ p.payo-calculator-vat-details {
     justify-content: space-between;
   }
   .payo-logo-wrapper img {
-    max-width: 120px;
+    max-width: 150px;
   }
   #site-navigation {
     padding-left: 0;
@@ -4038,7 +4042,7 @@ p.payo-calculator-vat-details {
     text-align: center;
   }
   .payo-logo-wrapper img {
-    max-width: 100px;
+    max-width: 150px;
   }
   #primary-menu .menu-item a {
     padding: 8px 3px;
@@ -4584,7 +4588,7 @@ p.payo-calculator-vat-details {
   }
   .payo-header-navbar.payo-header-on-image {
     background-size: cover;
-    padding: 25px 0 70px;
+    padding: 25px 0 25px;
   }
   .payo-faqs-question-panel {
     padding: 0;
@@ -4894,6 +4898,9 @@ p.payo-calculator-vat-details {
   .footer-company {
     padding: 25px 0 20px;
   }
+  .payo-footer-company-details img {
+    max-width: 100%;
+  }
   #payoPartnersSlider .item img {
     max-width: 100px;
   }
@@ -4924,7 +4931,7 @@ p.payo-calculator-vat-details {
     top: 50%;
   }
   .payo-footer-company-details img {
-    max-width: 125px;
+    max-width: 100%;
   }
   .payo-homepage-banner-wrapper {
     padding: 215px 0 250px;
