@@ -157,7 +157,7 @@ a:hover {
 #primary-menu .menu-item {
   font-family: ws-regular, sans-serif;
   font-size: 15px;
-  margin: 0 5px;
+  margin: 0 5px 8px;
   line-height: 25px;
 }
 #primary-menu {
@@ -179,20 +179,20 @@ a:hover {
   color: #000 !important;
   width: 100% !important;
   display: inline-block;
-  padding: 20px 20px 10px !important;
+  padding: 20px 20px 20px !important;
   font-weight: 600 !important;
 }
 .sub-menu li a:hover,
 .sub-menu li a:focus {
   color: var(--payo-primary) !important;
-  background-color: var(--payo-secondary);
+  background-color: #bbbbbb;
 }
 #primary-menu.navigation-on-white .menu-item a {
-  color: var(--payo-primary);
+  color: #fff;
 }
 #primary-menu.navigation-on-white .menu-item a:hover,
 #primary-menu.navigation-on-white .menu-item a:focus {
-  color: #000;
+  color: #fff;
 }
 #primary-menu.navigation-on-white .sub-menu li a {
   color: #fff;
@@ -225,8 +225,8 @@ a:hover {
   background-color: var(--payo-secondary);
 }
 #primary-menu.navigation-on-white .payo-custom-navlink.payo-member-signup a {
-  border: 1px solid var(--payo-primary);
-  color: var(--payo-primary);
+  border: 1px solid #fff;
+  color: #fff;
 }
 #primary-menu.navigation-on-white
   .payo-custom-navlink.payo-member-signup
@@ -234,8 +234,8 @@ a:hover {
 #primary-menu.navigation-on-white
   .payo-custom-navlink.payo-member-signup
   a:focus {
-  background-color: var(--payo-primary);
-  color: var(--payo-secondary);
+  background-color: var(--payo-secondary);
+  color: var(--payo-primary);
 }
 .payo-custom-navlink.payo-portal a {
   border: 1px solid var(--payo-secondary);
@@ -257,13 +257,13 @@ a:hover {
 }
 #primary-menu.navigation-on-white .payo-custom-navlink.payo-portal a:hover,
 #primary-menu.navigation-on-white .payo-custom-navlink.payo-portal a:focus {
-  color: var(--payo-primary);
-  border: 1px solid var(--payo-primary);
+  color: var(--payo-secondary);
+  border: 1px solid var(--payo-secondary);
 }
 .main-navigation ul ul {
   background-color: #fff;
   display: unset;
-  width: 500px;
+  width: 100%;
   padding: 0;
   text-align: left;
 }
@@ -4024,7 +4024,7 @@ p.payo-calculator-vat-details {
     background-color: var(--payo-primary);
     left: -100%;
     right: 0;
-    margin-top: 25px;
+    margin-top: 10px;
     padding: 15px;
     box-shadow: 0 3px 4px 1px #0000006b;
   }
@@ -4457,6 +4457,7 @@ p.payo-calculator-vat-details {
 @media screen and (max-width: 768px) {
   .payo-homepage-banner {
     height: unset;
+    margin-top: -20vh;
   }
   .payo-site-footer {
     padding: 50px 0 15px;
