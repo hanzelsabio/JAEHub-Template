@@ -267,9 +267,13 @@ a:hover {
   padding: 0;
   text-align: left;
 }
+.main-navigation #menu-item-42 .sub-menu {
+  width: 320px !important;
+  padding: 0;
+}
 .main-navigation #menu-item-41 .sub-menu,
 .main-navigation #menu-item-49 .sub-menu {
-  width: 300px !important;
+  width: 320px !important;
   padding: 0;
 }
 .main-navigation #menu-item-70 .sub-menu {
@@ -282,7 +286,7 @@ a:hover {
   width: 100% !important;
 }
 .sub-menu li {
-  width: 50%;
+  width: 100%;
   margin: 0 !important;
 }
 .sub-menu li:nth-child(odd) {
